@@ -9,52 +9,69 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
+    <div class="header-icons">
+      <button class="icon search" aria-label="검색">
+        <img src="img/search.svg" alt="검색" />
+      </button>
+      <button class="icon barcode" aria-label="바코드">
+        <img src="img/barcode.svg" alt="바코드" />
+      </button>
+      <button class="icon login" aria-label="로그인">
+        <img src="img/login.svg" alt="로그인" />
+      </button>
+      <button class="icon user" aria-label="마이페이지">
+        <img src="img/mypage.svg" alt="마이페이지" />
+      </button>
+      <button class="icon cart" aria-label="장바구니">
+        <img src="img/cart.svg" alt="장바구니" />
+      </button>
+    </div>
     <header class="header">
       <div class="header-inner">
-        <h1 class="logo">MUJI <span class="jp">無印良品</span></h1>
-        <div class="header-icons">
-          <button class="icon search" aria-label="검색">
-            <img src="muji.files/search.5b4ae4fe.svg" alt="MUJI 로고" />
-          </button>
-          <button class="icon barcode" aria-label="바코드">
-            <img src="muji.files/barcode.ea6d9538.svg" alt="바코드" />
-          </button>
-          <button class="icon login" aria-label="로그인">
-            <img src="muji.files/login.054fe92d.svg" alt="로그인" />
-          </button>
-          <button class="icon user" aria-label="마이페이지">
-            <img src="muji.files/mypage.5213bf7b.svg" alt="마이페이지" />
-          </button>
-          <button class="icon cart" aria-label="장바구니">
-            <img src="muji.files/cart.72f33321.svg" alt="장바구니" />
-          </button>
-        </div>
+        <h1 class="logo">
+          <a href="index.html">
+            <img src="img/muji_longlogo.svg" alt="무인양품 로고" />
+          </a>
+        </h1>
       </div>
     </header>
     </nav>
 <section class="main-menu">
   <div class="swiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="https://public.mujikorea.co.kr/images/plans/2506_wind_bn_pc.jpg" alt="main" /></div>
-      <div class="swiper-slide"><img src="https://public.mujikorea.co.kr/images/plans/2504_fur_bn_pc.jpg" alt="main" /></div>
-      <div class="swiper-slide"><img src="https://public.mujikorea.co.kr/images/plans/2504_cool_bn_pc.jpg" alt="main" /></div>
+      <div class="swiper-slide"><img src="img/banner.jpg" alt="main" /></div>
+      <div class="swiper-slide"><img src="img/banner2.jpg" alt="main" /></div>
+      <div class="swiper-slide"><img src="img/banner3.jpg" alt="main" /></div>
+      <div class="swiper-slide"><img src="img/banner4.jpg" alt="main" /></div>
+      <div class="swiper-slide"><img src="img/banner5.jpg" alt="main" /></div>
+      <div class="swiper-slide"><img src="img/banner6.jpg" alt="main" /></div>
+      <div class="swiper-slide"><img src="img/banner7.jpg" alt="main" /></div>
+      <div class="swiper-slide"><img src="img/banner8.jpg" alt="main" /></div>
+      <div class="swiper-slide"><img src="img/banner9.jpg" alt="main" /></div>
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-pagination"></div>    
   </div>
-  <div class="main-menu-row">
+  <section class="main-menu-row">
     <div class="content-row">
       <button>최근 본 상품</button>
     </div>
-    <div class="main-photo">
+    <section class="main-photo">
       <div class="main-photo-title">회원님을 위한 맞춤 추천</div>
-      <img
-        src="https://public.mujikorea.co.kr/images/plans/2503_cos_bn_pc.jpg"
-        alt="맞춤추천사진"
-      />
-    </div>
+      <marquee class="main-photo-marquee" behavior="scroll" direction="left" scrollamount="6">
+        <img src="img/main_photo.jpg" alt="맞춤추천사진1"/>
+        <img src="img/main_photo2.jpg" alt="맞춤추천사진2"/>
+        <img src="img/main_photo3.jpg" alt="맞춤추천사진3"/>
+        <img src="img/main_photo4.jpg" alt="맞춤추천사진4"/>
+        <img src="img/main_photo5.jpg" alt="맞춤추천사진5"/>
+        <img src="img/main_photo6.jpg" alt="맞춤추천사진6"/>
+        <img src="img/main_photo7.jpg" alt="맞춤추천사진7"/>
+        <img src="img/main_photo8.jpg" alt="맞춤추천사진8"/>
+      </marquee>
+    </section>
   </div>
+  
   <script>
   new Swiper('.swiper', {
     loop: true,
