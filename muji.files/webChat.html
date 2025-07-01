@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<!-- saved from url=(0273)https://webchat.bizmsg.io/services/webChat?sender_key=hrs43yd3yraj0cswmmmsffa8obme1il85gc0js85&color=muji&domain=mujikorea.co.kr&Picon=https://talk-img.bizmsg.io/webchat/icon/20250218095402601.png&Aicon=https://talk-img.bizmsg.io/webchat/icon/20250218095402591.png&confirm= -->
+<html lang="ko-KR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width ,height=device-height,viewport-fit=cover"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <title>T-Chat</title>
+    <link rel="stylesheet" href="./Default_CSS_TCK_210216.css" />
+    <link rel="stylesheet" href="./TCK_Chatbot_Content_210226.css" />
+    <link rel="stylesheet" href="./TCK_Chatbot_Theme_250327.css" />
+
+    <script src="./jquery.min.js"></script>
+    <script src="./script.min.js"></script>
+    <script src="./script.js"></script>
+    <script src="./sha256.js"></script>
+
+    <script src="./sockjs.min.js"></script>
+    <script src="./stomp.min.js"></script>
+
+    <script src="./chat.js"></script>
+    <script src="./websocket.js"></script>
+    <script src="./message.js"></script>
+    <script src="./autolink.js"></script>
+
+    <script type="text/javascript">
+      var socketUrl = "https://webchat.bizmsg.io";
+      var sender_key = "hrs43yd3yraj0cswmmmsffa8obme1il85gc0js85";
+      var unique_key = "Ulhqa";
+      var STM =
+        '1:1채팅을 요청하셨습니다. 채팅 내용은 상담 품질 관리를 위해 무인양품에 저장됩니다. 채팅을 원하신다면 아래 &#39;상담 시작하기&#39; 버튼을 눌러주세요. 채팅을 원하지 않으신다면 "!종료"를 입력해주세요.';
+      var maintain = "";
+      var state = "";
+      var s_type = "TX";
+      var s_msg = "기분 좋은 생활을 제안하는 무인양품(MUJI) ";
+      var s_url = "";
+      var info = "mujikorea.co.kr,mujikorea.net,bizmsg.io";
+      var list = info.split(",");
+      var n = "무인양품 고객센터";
+      var cc = 0;
+
+      /* extra variable */
+      var extra = "";
+
+      var dis = "Y";
+      var con = "";
+
+      var generics =
+        '[{"action":"챗봇 시작","index":1,"label":"챗봇 시작","type":"BK"},{"action":"*","index":2,"label":"이전으로","type":"BF"},{"action":"!종료","index":3,"label":"상담종료","type":"CD"}]';
+      var dh = "";
+
+      if (Object.keys(generics).length === 0) {
+        generics = "";
+      } else {
+        generics = JSON.parse(generics);
+      }
+
+      var t_type = "B";
+      var u_type = "N";
+
+      window.onload = function () {
+        window.parent.postMessage({ t_type: t_type, fn: "f" }, "*");
+
+        //alert(sock.current.ws.readyState);
+
+        var UserAgent = navigator.userAgent;
+
+        if (
+          UserAgent.match(
+            /iPhone|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson|iPad|Mobi/i
+          ) != null ||
+          UserAgent.match(/LG|SAMSUNG|Samsung/) != null
+        ) {
+          //alert(sock.current.ws.readyState);
+
+          document.addEventListener(
+            "visibilitychange",
+            handleVisibilityChange,
+            false
+          );
+        }
+
+        //프로젝트에 따른 운영 시간 확인 노출 설정
+        switch (sender_key) {
+          //수정 시 message.js | ChatbotContent.jsp | WebChatStartController.java 수정
+          case "q0a80x8hqgjiairf7ck8yeto0o46zyttdk95g5pu": //HMM 운영계
+          case "5qtkb8ftynbgtofjmejiwr3e5x9mugneyqu3uayk": //HMM 개발계
+            document.getElementById("operation_time").remove();
+            document.getElementById("box").placeholder =
+              "Please enter a message.";
+            break;
+        }
+        chatBotInit();
+      };
+
+      window.addEventListener("message", function (e) {
+        if (e.data.parentData === "scroll") {
+          var t = document.getElementById("scroll");
+          var t2 = document.getElementById("scroll2");
+
+          setTimeout(function () {
+            t.scrollTop = t2.scrollHeight;
+          }, 500);
+        } else {
+          if (e.data.D != null || e.data.D != undefined) {
+            dh = e.data.DH;
+
+            var whitelist_cert = false;
+            for (var k = 0; k < list.length; k++) {
+              if (e.data.D.indexOf(list[k]) >= 0) {
+                var domain = e.data.D.substring(
+                  e.data.D.indexOf(list[k]),
+                  e.data.D.length
+                );
+                if (list[k].indexOf(domain) == 0) {
+                  whitelist_cert = true;
+                  break;
+                }
+              }
+            }
+
+            if (!whitelist_cert) {
+              location.href = "/services/fail?color=" + "muji";
+            }
+          }
+        }
+
+        cc = e.data.Cnum;
+        con = e.data.Cnum;
+      });
+
+      //메시지 쏠때마다 카운트 0 부터 시작
+      function ck() {
+        if (con != "undefined" || con.length > 0) {
+          cc++;
+
+          var pcon = parseInt(con);
+          var pcc = parseInt(cc);
+
+          if (isNaN(pcon)) {
+            pcon = 0;
+          }
+
+          var re = pcon + pcc;
+
+          window.parent.postMessage({ count: re, fn: "a" }, "*");
+        } else {
+          cc++;
+          window.parent.postMessage({ count: cc, fn: "b" }, "*");
+        }
+      }
+
+      //쿠키 채팅 개수 보내기
+      function ckk() {
+        window.parent.postMessage({ ccount: con, fn: "c" }, "*");
+      }
+
+      function stem() {
+        //document.getElementById("bottomCon").style.display = "none";
+
+        if (dis == "N") {
+          $("#act").addClass("disabled");
+          $("#fileSend").prop("readonly", "true");
+          $("#box").prop("readonly", "true");
+          $("#box").attr("placeholder", "채팅이 불가능한 채널입니다.");
+          $("#disabled").attr("disabled", true);
+        }
+      }
+
+      function theme() {
+        $(".chat_bot").addClass("muji");
+
+        if (
+          "https://talk-img.bizmsg.io/webchat/icon/20250218095402601.png" !=
+            null &&
+          "https://talk-img.bizmsg.io/webchat/icon/20250218095402601.png" !=
+            "null"
+        ) {
+          $("#consulting1").attr(
+            "src",
+            "https://talk-img.bizmsg.io/webchat/icon/20250218095402601.png"
+          );
+        }
+
+        if (
+          "https://talk-img.bizmsg.io/webchat/icon/20250218095402591.png" !=
+            null &&
+          "https://talk-img.bizmsg.io/webchat/icon/20250218095402591.png" !=
+            "null"
+        ) {
+          $("#consulting2").attr(
+            "src",
+            "https://talk-img.bizmsg.io/webchat/icon/20250218095402591.png"
+          );
+        }
+
+        //상담사 연결 상태 잠금
+        // fth8z630z7yhpuhl8u28upnzkllfr34qc33rxd6z / Tving(PC)
+        // 6b6lgloogvuw8u1i9p8f95si0jxpubz2hjl3ks4z / Tving
+        if (
+          sender_key == "fth8z630z7yhpuhl8u28upnzkllfr34qc33rxd6z" ||
+          sender_key == "6b6lgloogvuw8u1i9p8f95si0jxpubz2hjl3ks4z"
+        ) {
+          document.getElementById("connection_state").style.display = "none";
+        }
+        //삼당사 연결 사용 안함시 상담사 연결상태와 운영시간 non-display
+        if ("상담사 연결 원활" == "NotUse") {
+          document.getElementById("connection_state").style.display = "none";
+          document.getElementById("operation_time").style.display = "none";
+        }
+      }
+
+      //지역 관계 없이 AM/PM 형식으로 날짜 표시 (공통 function)
+      // new Date().format("a/p hh:mm") 로 표시할 시 오전 / 오후 한글로 나오기때문.
+      function formatAMPM(date) {
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var ampm = hours >= 12 ? "PM" : "AM"; // 12시보다 크면 pm
+
+        hours = hours % 12;
+        hours = hours ? hours : 12; // 0이라면 12가 되어야한다.
+
+        minutes = minutes < 10 ? "0" + minutes : minutes; // 10분 미만일 시 0 붙임
+
+        var strTime = ampm + " " + hours + ":" + minutes + " ";
+
+        return strTime;
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="chats">
+      <ul style="margin: 0; list-style: none; padding: 0">
+        <li id="StringID" data-id="StringID">
+          <div id="TCK" class="tckColorTheme chat_bot default muji">
+            <section class="chat_bot_content">
+              <header class="chat_bot_header mainBackColor">
+                <div class="chat_bot_cf">
+                  <div class="chat_bot_title_logo chat_bot_left">
+                    <img
+                      src="./20250218095402601.png"
+                      alt="상담아이콘"
+                      id="consulting1"
+                    />
+                    <span class="mainFontColor">무인양품 고객센터</span>
+                  </div>
+
+                  <div class="chat_bot_util chat_bot_right">
+                    <ul class="chat_bot_cf chat_bot_inList"></ul>
+                  </div>
+                </div>
+                <div
+                  class="chat_bot_notice subBackColor mainFontColor contentVisible"
+                >
+                  기분 좋은 생활을 제안하는 무인양품(MUJI)
+                </div>
+                <div class="chat_bot_time chat_bot_cf mainFontColor">
+                  <div
+                    class="chat_bot_wait chat_bot_left"
+                    id="connection_state"
+                  >
+                    <img src="./icon_user.png" alt="대기고객" />상담사 연결 원활
+                  </div>
+                  <div class="chat_bot_oper chat_bot_right" id="operation_time">
+                    <img src="./icon_clock.png" alt="운영시간" />
+                    <span>운영시간 보기</span>
+                  </div>
+                  <div class="chat_bot_oper_layer">
+                    <ul>
+                      <li>평일 : 10:00~17:00</li>
+                      <li class="layerpl">(점심시간 12:30~13:30 )</li>
+                      <li></li>
+                      <li></li>
+                      <li>토요일,일요일 휴무</li>
+                    </ul>
+                  </div>
+                </div>
+              </header>
+              <section
+                id="dropZoneUpStringID"
+                class="chat_bot_main chatBackColor"
+                style="height: 0px; top: 0px"
+              >
+                <div class="chat_bot_main_window" id="scroll">
+                  <div id="scroll2" class="scroll2">
+                    <div class="newDateTime timeFontColor" id="today_date">
+                      2025년 06월 28일
+                    </div>
+                    <article
+                      class="chat_bot_customer_service chats-msg-templete"
+                      id="chat_bot_customer_service"
+                      style="display: none"
+                    >
+                      <div class="chat_bot_cs_title_logo">
+                        <span>
+                          <img
+                            src="./20250218095402591.png"
+                            alt="상담아이콘"
+                            id="consulting2"
+                          />
+                        </span>
+                        <p class="chats-msg-view-user-name"></p>
+                      </div>
+                      <div class="chatting">
+                        <div
+                          class="chat_bot_text_box customerColor"
+                          id="chatting2"
+                        ></div>
+                        <div class="dateTime timeFontColor"></div>
+                      </div>
+                    </article>
+                    <article
+                      class="chat_bot_customer chats-msg-templete"
+                      id="chat_bot_customer"
+                      style="display: none"
+                    >
+                      <div class="chatting">
+                        <div class="dateTime timeFontColor"></div>
+                        <div
+                          class="chat_bot_text_box mainBackColor mainFontColor"
+                        ></div>
+                      </div>
+                    </article>
+                    <div class="a"></div>
+                    <article
+                      class="chat_bot_customer_service"
+                      id="chat_bot_customer_service"
+                      style=""
+                    >
+                      <div class="chat_bot_cs_title_logo">
+                        <span>
+                          <img
+                            src="./20250218095402591.png"
+                            alt="상담아이콘"
+                            id="consulting2"
+                          />
+                        </span>
+                        <p class="chats-msg-view-user-name">
+                          무인양품 고객센터
+                        </p>
+                      </div>
+                      <div class="chatting">
+                        <div
+                          class="chat_bot_text_box customerColor"
+                          id="chatting2"
+                        >
+                          <p>
+                            1:1채팅을 요청하셨습니다. 채팅 내용은 상담 품질
+                            관리를 위해 무인양품에 저장됩니다. 채팅을 원하신다면
+                            아래 '상담 시작하기' 버튼을 눌러주세요. 채팅을
+                            원하지 않으신다면 "!종료"를 입력해주세요.
+                          </p>
+                          <div class="chat_bot_category">
+                            <a
+                              href="https://webchat.bizmsg.io/services/webChat?sender_key=hrs43yd3yraj0cswmmmsffa8obme1il85gc0js85&amp;color=muji&amp;domain=mujikorea.co.kr&amp;Picon=https://talk-img.bizmsg.io/webchat/icon/20250218095402601.png&amp;Aicon=https://talk-img.bizmsg.io/webchat/icon/20250218095402591.png&amp;confirm=#"
+                              class=""
+                              id="상담"
+                              onclick="javascript:chattingStart(this);"
+                              >상담 시작 하기</a
+                            >
+                          </div>
+                        </div>
+                        <div class="dateTime timeFontColor">PM 2:38</div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </section>
+              <section class="chat_bot_chatting_tab chat_bot_cf">
+                <div class="chat_bot_generic_btn" id="bottomCon">
+                  <ul
+                    class="chat_bot_cf mainBackColor mainFontColor"
+                    id="generics"
+                  >
+                    <!-- <li class="subBorderColor"><a href="javascript:goBefore();">이전으로</a></li>
+              <li class="subBorderColor"><a href="javascript:goStart();">처음으로</a></li>
+              <li class="subBorderColor"><a href="javascript:goEnd();">상담종료</a></li> -->
+                    <li class="subBorderColor col3">
+                      <a
+                        href='javascript:chattingStart2("%EC%B1%97%EB%B4%87 %EC%8B%9C%EC%9E%91");'
+                        class="ellipsis"
+                      >
+                        챗봇 시작</a
+                      >
+                    </li>
+                    <li class="subBorderColor col3">
+                      <a href="javascript:goBefore();" class="ellipsis"
+                        >이전으로</a
+                      >
+                    </li>
+                    <li class="subBorderColor col3">
+                      <a href='javascript:goEnd("상담종료"); ' class="ellipsis"
+                        >상담종료</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  id="dropZoneDownStringID"
+                  class="chats-msg-view-action-inner"
+                >
+                  <form
+                    class="chat_bot_cf active"
+                    onsubmit="return false;"
+                    method="post"
+                  >
+                    <!-- 비활성화 -->
+                    <!-- <div class="chats-msg-view-action-form chatBackColor disabled"> -->
+                    <div
+                      class="chats-msg-view-action-form chatBackColor"
+                      id="act"
+                    >
+                      <ul class="chat_bot_cf chat_bot_inList">
+                        <li>
+                          <div class="chat_bot_left fileSead">
+                            <label for="fileSend">
+                              <img src="./icon_file_on.png" alt="" />
+                            </label>
+                            <!-- <input  id="fileSend" name="fileSend" onchange="ajaxFileSend();" style="display: none" readonly /> -->
+                            <input
+                              type="file"
+                              id="fileSend"
+                              accept=".pdf, .mp4, .avi, .mov, .wmv, .jpg, .jpeg, .gif, .bmp, .png"
+                              name="fileSend"
+                              onchange="ajaxFileSend();"
+                              style="display: none"
+                            />
+                          </div>
+                        </li>
+                        <li>
+                          <!-- <input type="text" id="box" class="form-control Form" placeholder="메세지를 입력하실 수 없는 채널입니다." title="채팅 내용 입력" readonly/> -->
+                          <input
+                            type="text"
+                            id="box"
+                            class="form-control Form"
+                            placeholder="메세지를 입력해 주세요."
+                            title="채팅 내용 입력"
+                          />
+                        </li>
+                        <li>
+                          <!-- <button id="disabled" disabled> -->
+                          <button id="disabled">
+                            <img src="./icon_submit_on.png" alt="전송 활성화" />
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </form>
+                </div>
+              </section>
+            </section>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <script src="./TCK_Chatbot_210226.js"></script>
+    <script>
+      <!-- chatBotInit(); -->
+    </script>
+  </body>
+</html>

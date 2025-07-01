@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>무인양품(MUJI) 온라인스토어</title>
+    <link rel="stylesheet" href="css/index1.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="logo">MUJI <span class="jp">無印良品</span></h1>
+        <div class="header-icons">
+          <button class="icon search" aria-label="검색">
+            <img src="muji.files/search.5b4ae4fe.svg" alt="MUJI 로고" />
+          </button>
+          <button class="icon barcode" aria-label="바코드">
+            <img src="muji.files/barcode.ea6d9538.svg" alt="바코드" />
+          </button>
+          <button class="icon login" aria-label="로그인">
+            <img src="muji.files/login.054fe92d.svg" alt="로그인" />
+          </button>
+          <button class="icon user" aria-label="마이페이지">
+            <img src="muji.files/mypage.5213bf7b.svg" alt="마이페이지" />
+          </button>
+          <button class="icon cart" aria-label="장바구니">
+            <img src="muji.files/cart.72f33321.svg" alt="장바구니" />
+          </button>
+        </div>
+      </div>
+    </header>
+    </nav>
+<section class="main-menu">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://public.mujikorea.co.kr/images/plans/2506_wind_bn_pc.jpg" alt="main" /></div>
+      <div class="swiper-slide"><img src="https://public.mujikorea.co.kr/images/plans/2504_fur_bn_pc.jpg" alt="main" /></div>
+      <div class="swiper-slide"><img src="https://public.mujikorea.co.kr/images/plans/2504_cool_bn_pc.jpg" alt="main" /></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>    
+  </div>
+  <div class="main-menu-row">
+    <div class="content-row">
+      <button>최근 본 상품</button>
+    </div>
+    <div class="main-photo">
+      <div class="main-photo-title">회원님을 위한 맞춤 추천</div>
+      <img
+        src="https://public.mujikorea.co.kr/images/plans/2503_cos_bn_pc.jpg"
+        alt="맞춤추천사진"
+      />
+    </div>
+  </div>
+  <script>
+  new Swiper('.swiper', {
+    loop: true,
+    pagination: { el: '.swiper-pagination', clickable: true },
+    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    slidesPerView: 1,
+    spaceBetween: 0,
+  });
+</script>
+  </body>
+</html>

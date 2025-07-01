@@ -1,0 +1,805 @@
+@charset "utf-8";
+/* css수정시 다른 css파일과 겹칠 수 있으므로 #TCK.chat_bot 삽입 후 수정 */
+/* z-index는 10000번째 부터 시작 */
+/* common */
+
+#TCK.chat_bot input,
+#TCK.chat_bot label,
+#TCK.chat_bot button {
+  display: block;
+  width: 100%;
+}
+#TCK.chat_bot .fileSead label {
+	   cursor: default;
+}
+
+#TCK.chat_bot .chat_bot_chatting_tab form  li label ,
+#TCK.chat_bot .chat_bot_chatting_tab form  li button {
+  cursor:pointer;
+}
+
+#TCK.chat_bot .chat_bot_chatting_tab form .disabled li input,
+#TCK.chat_bot .chat_bot_chatting_tab form  .disabled li label ,
+#TCK.chat_bot .chat_bot_chatting_tab form .disabled li button {
+  cursor:default;
+}
+
+#TCK.chat_bot .chat_bot_cf:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#TCK.chat_bot .chat_bot_left {
+  width: auto;
+  float: left;
+  text-align: left;
+}
+#TCK.chat_bot .chat_bot_right {
+  width: auto;
+  float: right;
+  text-align: right;
+}
+#TCK.chat_bot .chat_bot_inList li {
+  float: left;
+}
+#TCK.chat_bot .chat_bot_inList button {
+	cursor: default;
+}
+#TCK.chat_bot .Error {
+  width: 100%;
+  height: 100vh;
+}
+#TCK.chat_bot .Error .ErrorContent {
+  width: 100%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+/************************************************************************
+********************** chat_bot_content common***********************
+*************************************************************************/
+#TCK.chat_bot .chat_bot_content {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  font-size: 1rem;
+  transition: all 0.3s;
+  z-index: 10001;
+  cursor: auto;
+}
+
+/* chat_bot_close */
+#TCK.chat_bot .chat_bot_content .chat_bot_close {
+  position: relative;
+  width: 25px;
+  height: 25px;
+}
+#TCK.chat_bot .chat_bot_content .chat_bot_close span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  z-index: 10002;
+  cursor: pointer;
+  opacity: 0.9;
+}
+#TCK.chat_bot .chat_bot_content .chat_bot_close span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+#TCK.chat_bot .chat_bot_content .chat_bot_close span:nth-child(2) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+/* scroll bar 커스텀 */
+#TCK.chat_bot .chat_bot_main .chat_bot_main_window,
+#TCK.chat_bot .chat_bot_setting.min {
+  /* Fire Fox */
+  scrollbar-width: thin;
+  scrollbar-color: #dddddd transparent;
+  /* IE */
+  scrollbar-face-color: #cecdd1;
+  scrollbar-track-color: #f5f3f9; /* IE 는 transparent, none이 안되므로 배경색과 같은컬러로 교체*/
+  scrollbar-arrow-color: #cecdd1;
+  scrollbar-highlight-color: #cecdd1;
+  scrollbar-3dlight-color: none;
+  scrollbar-shadow-color: #cecdd1;
+  scrollbar-darkshadow-color: none;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_main_window::-webkit-scrollbar,
+#TCK.chat_bot .chat_bot_setting.min::-webkit-scrollbar {
+  width: 6px;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_main_window::-webkit-scrollbar-track,
+#TCK.chat_bot .chat_bot_setting.min::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_main_window::-webkit-scrollbar-thumb,
+#TCK.chat_bot .chat_bot_setting.min::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: rgba(128, 128, 128, 0.3);
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_main_window::-webkit-scrollbar-button,
+#TCK.chat_bot .chat_bot_setting.min::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+/************************************************************************
+*************************** chat_bot_header  ***************************
+*************************************************************************/
+#TCK.chat_bot .chat_bot_content .chat_bot_header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 25px 18px;
+  z-index: 10005;
+}
+
+#TCK.chat_bot .chat_bot_content .chat_bot_header .chat_bot_title_logo {
+  width: 100%;
+  font-weight: bold;
+  font-size: 0.9375rem;
+}
+#TCK.chat_bot .chat_bot_content .chat_bot_header .chat_bot_title_logo img {
+  width: 40px;
+  display: inline-block;
+  margin-right: 3px;
+  border-radius: 50%;
+}
+#TCK.chat_bot .chat_bot_content .chat_bot_header .chat_bot_util {
+  position: absolute;
+  top: 20px;
+  right: 16.5px;
+}
+#TCK.chat_bot .chat_bot_content .chat_bot_header .chat_bot_util ul li {
+  display: inline-block;
+  margin-right: 20px;
+  cursor: pointer;
+}
+#TCK.chat_bot .chat_bot_content .chat_bot_header .chat_bot_util ul li:last-of-type {
+  margin-right: 0;
+}
+#TCK.chat_bot .chat_bot_content .chat_bot_header .chat_bot_util ul li img {
+  width: 25px;
+}
+#TCK.chat_bot .chat_bot_content .chat_bot_header .chat_bot_notice {
+  display: none;
+  margin-top: 10px;
+  padding: 6px 12px;
+  border-radius: 30px;
+  font-size: 0.75rem;
+}
+#TCK.chat_bot .chat_bot_content .chat_bot_header .chat_bot_notice.contentVisible {
+  display: block;
+}
+#TCK.chat_bot .chat_bot_content .chat_bot_header .chat_bot_time {
+  position: relative;
+}
+#TCK.chat_bot .chat_bot_content .chat_bot_header .chat_bot_wait,
+#TCK.chat_bot .chat_bot_content .chat_bot_header .chat_bot_oper {
+  margin-top: 15px;
+  font-size: 0.6875rem;
+}
+#TCK.chat_bot .chat_bot_content .chat_bot_header .chat_bot_wait img,
+#TCK.chat_bot .chat_bot_content .chat_bot_header .chat_bot_oper img {
+	width:100%;
+	max-width:20px;
+  display: inline-block;
+  margin-right: 5px;
+}
+#TCK.chat_bot .chat_bot_content .chat_bot_header .chat_bot_oper {
+  cursor: pointer;
+  z-index: 10010;
+}
+#TCK.chat_bot .chat_bot_content .chat_bot_header .chat_bot_oper_layer {
+  display: none;
+  position: absolute;
+  top: 45px;
+  right: -7px;
+  padding: 15px;
+  opacity: 0.9;
+  border-radius: 10px;
+  z-index: 10010;
+  cursor: pointer;
+  background: #343439;
+  color: #fff;
+}
+#TCK.chat_bot .chat_bot_content .chat_bot_header .chat_bot_oper_layer ul {
+  font-size: 0.68751rem;
+  line-height: 150%;
+  letter-spacing: -0.05rem;
+  opacity: 0.8;
+}
+#TCK.chat_bot .chat_bot_content .chat_bot_header .chat_bot_oper_layer .layerpl {
+  padding-left: 30px;
+}
+/************************************************************************
+*************************** chat_bot_main ******************************
+*************************************************************************/
+#TCK.chat_bot .chat_bot_main {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  padding: 0 5px 0 20px;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_main_window {
+  height: 100%;
+  overflow-y: scroll;
+  padding-right: 5px;
+}
+
+#TCK.chat_bot .chat_bot_main .chat_bot_main_window .newDateTime {
+  text-align: center;
+  font-size: 0.6875rem;
+  letter-spacing: -0.18px;
+  opacity: 0.8;
+  margin: 18px 0;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_main_window .chatting {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_main_window .chat_bot_text_box {
+  width: auto;
+  display: inline-block;
+  min-width: 50px;
+  max-width: 78%;
+  font-size: 0.75rem;
+  word-break: break-all;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_main_window .chat_bot_text_box img {
+  width: 100%;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_main_window .chatting .dateTime {
+  font-size: 0.6875rem;
+  letter-spacing: -0.18px;
+  opacity: 0.8;
+}
+/************************************************************************
+******************** chat_bot_customer_service  ***********************
+*************************************************************************/
+#TCK.chat_bot .chat_bot_main .chat_bot_customer_service {
+  position: relative;
+  margin-bottom: 15px;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_cs_title_logo {
+  display: block;
+  width: 100%;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_cs_title_logo span {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_cs_title_logo img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 100%;
+  text-align: center;
+  border-radius: 50%;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_cs_title_logo p {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-left:3px;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_text_box {
+  margin: 0 auto;
+  padding: 15px 20px 15px 15px;
+  border-radius: 3px 30px 30px 30px;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_cs_title_logo + .chatting .chat_bot_text_box {
+  margin-top: 15px;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chatting .dateTime {
+  width: auto;
+  display: inline-block;
+  position: absolute;
+  bottom: 0px;
+  margin-left: 5px;
+  margin-bottom: 0;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_category:first-of-type {
+  margin: 15px auto 0;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_category{
+  display:inline-block;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  display: inline-block;
+  padding: 10px 15px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border: 1px solid;
+  border-radius: 30px;
+  font-size: 0.6875rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_circleBtn {
+  width: 80%;
+  margin: 15px 10% 0;
+  text-align: center;
+  border: solid 1px #3f3f3f;
+  padding: 10px 0;
+  border-radius: 30px;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_privacy_policy p {
+  margin-top: 15px;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_privacy_policy label {
+  display: inline-block;
+  letter-spacing: -0.8px;
+  font-weight: bold;
+  color: #202020;
+  cursor: pointer;
+  margin-top: 15px;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_privacy_policy span:before {
+  content: url(../image/icon_check.png);
+  color: #c0c3c6;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 1px;
+  margin-right: 5px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_privacy_policy input[type="checkbox"] {
+  border: 0;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_privacy_policy input[type="checkbox"]:checked + span:before {
+  content: url(../image/icon_checked.png);
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_reserve label {
+  color: #202020;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_reserve label span {
+  color: #adadad;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_reserve input,
+#TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_reserve textarea {
+  border: solid 1px #adadad;
+  padding: 7px;
+}
+/************************************************************************
+*********************** chat_bot_customer  ****************************
+*************************************************************************/
+#TCK.chat_bot .chat_bot_main .chat_bot_customer {
+  position: relative;
+  text-align: right;
+  margin: 30px auto 20px;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_customer .chat_bot_text_box {
+  margin: 0 auto 10px;
+  padding: 15px 15px 15px 20px;
+  border-radius: 30px 3px 30px 30px;
+  text-align: left;
+}
+
+#TCK.chat_bot .chat_bot_main .chat_bot_main_window .chat_bot_customer .chatting .dateTime {
+  width: auto;
+  display: inline-block;
+  margin-bottom: 10px;
+  vertical-align: bottom;
+}
+/************************************************************************
+*********************** chat_bot_chatting_tab  *************************
+*************************************************************************/
+#TCK.chat_bot .chat_bot_chatting_tab {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  /* background: #e8e8e8; */
+  z-index: 10003;
+}
+#TCK.chat_bot .chat_bot_chatting_tab.genericOff {
+  border-top: 1px solid #ccc;
+}
+#TCK.chat_bot .chat_bot_chatting_tab .chat_bot_generic_btn #generics{
+  display:flex;
+  justify-content: space-between;
+  text-align: center;
+  flex-flow : row nowrap;
+}
+#TCK.chat_bot .chat_bot_chatting_tab .chat_bot_generic_btn li {
+  flex:0 0 auto;
+  width:100%;
+  box-sizing: border-box;
+  border-right: solid 1px;
+}
+
+#TCK.chat_bot .chat_bot_chatting_tab .chat_bot_generic_btn li.col3 {
+  width:33.33%;
+}
+#TCK.chat_bot .chat_bot_chatting_tab .chat_bot_generic_btn li.col2{
+  width:50%;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#TCK.chat_bot .chat_bot_chatting_tab .chat_bot_generic_btn li:last-of-type {
+  border-right: 0;
+}
+#TCK.chat_bot .chat_bot_chatting_tab .chat_bot_generic_btn li a {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.3px;
+  text-align: center;
+}
+#TCK.chat_bot .chat_bot_chatting_tab .chat_bot_generic_btn.contentHidden {
+  display: none;
+}
+
+#TCK.chat_bot .chat_bot_chatting_tab form.active {
+  /* background: #ffffff; */
+}
+#TCK.chat_bot .chat_bot_chatting_tab form ul li img {
+  display: block;
+  width: 75%;
+}
+#TCK.chat_bot .chat_bot_chatting_tab form ul {
+  margin: 0 10px;
+}
+#TCK.chat_bot .chat_bot_chatting_tab form li {
+  margin: 10px 0;
+  width: 40px;
+}
+#TCK.chat_bot .chat_bot_chatting_tab form li .fileSead,
+#TCK.chat_bot .chat_bot_chatting_tab form li button {
+  padding: 5px;
+}
+#TCK.chat_bot .chat_bot_chatting_tab form li:nth-of-type(2) {
+  width: calc(100% - 100px);
+  margin: 10px;
+}
+
+#TCK.chat_bot .chat_bot_chatting_tab .chat_bot_inList li:last-of-type {
+  float: right;
+}
+#TCK.chat_bot .chat_bot_chatting_tab form li input {
+  padding: 10px 0;
+  border-bottom-color: #ddd;
+  background: #f6f5fa;
+}
+
+#TCK.chat_bot .chat_bot_chatting_tab form .disabled li input {
+  background:none !important;
+}
+
+#TCK.chat_bot .chat_bot_chatting_tab form li input[type="text"]{
+  font-size:12px;
+}
+#TCK.chat_bot .chat_bot_chatting_tab form li input[type="text"]:focus {
+  transform:scale(1);
+}
+#TCK.chat_bot .chat_bot_chatting_tab form li input:disabled {
+  background: #e8e8e8;
+}
+#TCK.chat_bot .chat_bot_chatting_tab form li input.active {
+  background: #f6f5fa;
+}
+
+/************************************************************************
+*************************** chat_bot_setting ***************************
+*************************************************************************/
+#TCK.chat_bot .chat_bot_setting {
+  display: none;
+  width: 88%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10010;
+  background: #f6f6f7;
+}
+
+#TCK.chat_bot .chat_bot_setting .chat_bot_close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 10006;
+}
+#TCK.chat_bot .chat_bot_setting.contentVisible {
+  display: block;
+}
+#TCK.chat_bot .chat_bot_setting .chat_bot_close span {
+  background: #000;
+}
+#TCK.chat_bot .chat_bot_setting .chat_bot_close + p {
+  padding: 21px 0 21px 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #202020;
+}
+#TCK.chat_bot .chat_bot_setting form {
+  padding-left: 20px;
+  background: #fff;
+}
+#TCK.chat_bot .chat_bot_setting form > p,
+#TCK.chat_bot .chat_bot_setting form > span {
+  display: inline-block;
+  margin: 12px 0 20px;
+}
+#TCK.chat_bot .chat_bot_setting form > p:first-of-type {
+  font-weight: bold;
+  font-size: 0.9375rem;
+  color: #202020;
+}
+#TCK.chat_bot .chat_bot_setting form > span {
+  float: right;
+  font-size: 0.875rem;
+  cursor: pointer;
+  padding-right: 30px;
+}
+#TCK.chat_bot .chat_bot_setting form label {
+  padding: 0 15px;
+  padding-bottom: 12px;
+}
+#TCK.chat_bot .chat_bot_setting form label:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+#TCK.chat_bot .chat_bot_setting form label:last-of-type {
+  padding-bottom: 20px;
+}
+#TCK.chat_bot .chat_bot_setting form label p {
+  width: 35%;
+  float: left;
+  font-size: 0.875rem;
+  color: #202020;
+}
+#TCK.chat_bot .chat_bot_setting form input {
+  float: left;
+  width: 65%;
+  border-color: #eee;
+  background: none;
+  color: #202020;
+  font-size: 0.8rem;
+}
+#TCK.chat_bot .chat_bot_setting form input:disabled {
+  border: 0;
+  background: none;
+}
+#TCK.chat_bot .chat_bot_setting form + p {
+  padding: 11px 0 11px 20px;
+  font-size: 0.75rem;
+  color: #adadad;
+}
+#TCK.chat_bot .chat_bot_setting ul {
+  background: #fff;
+  padding: 15px 0 15px 20px;
+}
+#TCK.chat_bot .chat_bot_setting ul:first-of-type {
+  margin-bottom: 10px;
+}
+#TCK.chat_bot .chat_bot_setting ul li {
+  margin-bottom: 10px;
+}
+#TCK.chat_bot .chat_bot_setting ul li:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#TCK.chat_bot .chat_bot_setting ul li p {
+  float: left;
+  padding-left: 15px;
+  width: 70%;
+  font-size: 0.8rem;
+  color: #202020;
+}
+#TCK.chat_bot .chat_bot_setting ul:last-of-type li:first-of-type p {
+  font-weight: bold;
+  padding: 0;
+  font-size: 0.875rem;
+}
+#TCK.chat_bot .chat_bot_setting ul li button {
+  float: right;
+  width: 35px;
+  height: 18px;
+  margin-right: 30px;
+  background: #adadad;
+  border-radius: 30px;
+  cursor: pointer;
+}
+#TCK.chat_bot .chat_bot_setting ul li button:after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fff;
+  margin: 1.5px;
+}
+
+#TCK.chat_bot .chat_bot_setting ul li button.activeBackColor:after {
+  margin-left: 19px;
+}
+
+@media all and (max-width: 480px) {
+  /* chat_bot_content */
+  #TCK.chat_bot .chat_bot_content .chat_bot_close {
+    margin-top: 1px;
+    width: 22px;
+    height: 22px;
+  }
+  /************************** chat_bot_header  ***************************/
+  #TCK.chat_bot .chat_bot_content .chat_bot_header {
+    padding: 4.166666667vw 5.208333333vw 3.75vw;
+  }
+  #TCK.chat_bot .chat_bot_content .chat_bot_header .chat_bot_title_logo img {
+    margin-right: 0.625vw;
+  }
+  #TCK.chat_bot .chat_bot_content .chat_bot_header .chat_bot_util {
+    top: 5.208333333vw;
+  }
+  #TCK.chat_bot .chat_bot_content .chat_bot_header .chat_bot_util ul li {
+    margin-right: 3vw;
+  }
+  #TCK.chat_bot .chat_bot_content .chat_bot_header .chat_bot_notice {
+    margin-top: 3.125vw;
+    padding: 1.25vw 2.5vw;
+  }
+  #TCK.chat_bot .chat_bot_content .chat_bot_header .chat_bot_wait,
+  #TCK.chat_bot .chat_bot_content .chat_bot_header .chat_bot_oper {
+    margin-top: 3.125vw;
+  }
+  #TCK.chat_bot .chat_bot_content .chat_bot_header .chat_bot_wait img,
+  #TCK.chat_bot .chat_bot_content .chat_bot_header .chat_bot_oper img {
+    margin-right: 1.041666667vw;
+  }
+  #TCK.chat_bot .chat_bot_content .chat_bot_header .chat_bot_oper_layer .layerpl {
+    padding-left: 6.25vw;
+  }
+
+  /************************** chat_bot_main  ***************************/
+  #TCK.chat_bot .chat_bot_main {
+    padding: 0 1.583333333vw 0 4.166666667vw;
+  }
+  #TCK.chat_bot .chat_bot_content.contentVisible {
+    border: 0;
+  }
+  #TCK.chat_bot .chat_bot_main .chat_bot_main_window .chatting .dateTime {
+    letter-spacing: -0.03125rem;
+  }
+
+  /************************** chat_bot_customer_service  ***************************/
+  #TCK.chat_bot .chat_bot_main .chat_bot_customer_service {
+    margin-bottom: 3.125vw;
+  }
+  #TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_text_box {
+    padding: 4.166666667vw 5.208333333;
+  }
+  #TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_cs_title_logo + .chatting .chat_bot_text_box {
+    margin-top: 3.125vw;
+  }
+  #TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chatting .dateTime {
+    margin-left: 1.041666667vw;
+  }
+#TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_category:first-of-type {
+  margin: 3.125vw auto 0;
+}
+#TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_category{
+  display:inline-block;
+}
+  
+  #TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+    padding: 3.083333333vw 5.208333333vw;
+    margin-right: 1.041666667vw;
+    margin-bottom: 1.041666667vw;
+  }
+
+  #TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_circleBtn {
+    margin: 3.125vw 10% 0;
+    padding: 2.083333333vw 0;
+  }
+  #TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_privacy_policy p,
+  #TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_privacy_policy label {
+    margin-top: 3.125vw;
+  }
+  #TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_privacy_policy span:before {
+    margin-right: 1.04166667vw;
+  }
+  #TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_reserve label {
+    padding-bottom: 1.04166667vw;
+    margin-bottom: 3.125vw;
+  }
+  #TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_reserve input,
+  #TCK.chat_bot .chat_bot_main .chat_bot_customer_service .chat_bot_reserve textarea {
+    padding: 1.45833333vw;
+  }
+  /************************chat_bot_customer****************************/
+  #TCK.chat_bot .chat_bot_main .chat_bot_customer {
+    margin: 6.25vw auto 4.166666667vw;
+  }
+  #TCK.chat_bot .chat_bot_main .chat_bot_customer .chat_bot_text_box {
+    margin: 0 auto 2.083333333vw;
+    padding: 4.166666667vw 5.208333333vw;
+  }
+  #TCK.chat_bot .chat_bot_main .chat_bot_main_window .chat_bot_customer .chatting .dateTime {
+    margin-bottom: 2.083333333vw;
+  }
+
+  /************************** chat_bot_chatting_tab  ***************************/
+
+  #TCK.chat_bot .chat_bot_chatting_tab .chat_bot_generic_btn li a {
+    padding: 3.125vw;
+  }
+
+  #TCK.chat_bot .chat_bot_chatting_tab form ul {
+    margin: 0 4.083333333vw;
+  }
+
+  /*************************** chat_bot_setting ***************************/
+
+  #TCK.chat_bot .chat_bot_setting {
+    position: fixed;
+    width: 100%;
+  }
+  #TCK.chat_bot .chat_bot_setting .chat_bot_close {
+    top: 4.375vw;
+  }
+  #TCK.chat_bot .chat_bot_setting .chat_bot_close + p {
+    padding: 4.375vw 0 4.375vw 4.16666667vw;
+  }
+  #TCK.chat_bot .chat_bot_setting form {
+    padding-left: 4.16666667vw;
+  }
+  #TCK.chat_bot .chat_bot_setting form > p,
+  #TCK.chat_bot .chat_bot_setting form > span {
+    margin: 2.5vw 0 4.16666667vw;
+  }
+  #TCK.chat_bot .chat_bot_setting form label {
+    padding: 0 4.16666667vw 0 3.125vw;
+    padding-bottom: 2.5vw;
+  }
+  #TCK.chat_bot .chat_bot_setting form label:last-of-type {
+    padding-bottom: 4.16666667vw;
+  }
+  #TCK.chat_bot .chat_bot_setting form + p {
+    padding: 2.29166667vw 0 2.29166667vw 4.16666667vw;
+  }
+  #TCK.chat_bot .chat_bot_setting ul {
+    padding: 3.125vw 0 3.125vw 4.16666667vw;
+  }
+  #TCK.chat_bot .chat_bot_setting ul:first-of-type {
+    margin-bottom: 2.08333333vw;
+  }
+  #TCK.chat_bot .chat_bot_setting ul li {
+    margin-bottom: 2.08333333vw;
+  }
+  #TCK.chat_bot .chat_bot_setting ul li p {
+    padding-left: 3.125vw;
+  }
+  #TCK.chat_bot .chat_bot_setting ul:last-of-type li:first-of-type p {
+    font-size: 0.875rem;
+  }
+  #TCK.chat_bot .chat_bot_setting ul li button {
+    margin-right: 6.25vw;
+  }
+}

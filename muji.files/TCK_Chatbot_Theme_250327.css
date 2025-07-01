@@ -1,0 +1,1629 @@
+@charset "utf-8";
+/* css수정시 다른 css파일과 겹칠 수 있으므로 .tckColorTheme.chat_bot 삽입 후 수정 */
+
+/* 별도의 변동이 필요하면 클래스삽입 후 작성 */
+/* 스타트 버튼 */
+.tckColorTheme.chat_bot .startBackColor {
+  background: #ffffff !important;
+}
+/* 시스템알림 버튼 */
+.tckColorTheme.chat_bot .systemBackColor {
+  background: #e8e8eb !important;
+}
+/* 닫기버튼 */
+.tckColorTheme.chat_bot .closeBtnColor {
+  background: #ffffff !important;
+}
+/* 상담사 말풍선 */
+.tckColorTheme.chat_bot .customerColor {
+  background: #ffffff !important;
+}
+/* 상담채팅창 */
+.tckColorTheme.chat_bot .chatBackColor {
+  background-color: #f6f5fa !important;
+}
+/* 상담채팅창 사용X */
+.tckColorTheme.chat_bot .chatBackColor.disabled {
+  background-color: #ddd !important;
+}
+/* 채팅시간 */
+.tckColorTheme.chat_bot .timeFontColor {
+  color: #92989f !important;
+}
+
+/************************ 색상커스텀목록 ************************
+
+기본  : default  __보라색
+
+파스텔 톤               비비드 톤                  모던 톤
+p_red	                    v_red                         m_burlywood
+p_orange	             v_orange	                  m_gray
+p_yellow                v_yellow	                   m_midnightblue
+p_yellowgreen	      v_yellowgreen    	        m_darkgreen
+p_green	                v_green	                     m_aquamarine
+p_cyan	                 v_cyan	                      m_darkgray
+p_blue	                  v_blue	                     m_darkred
+p_navy	                 v_navy	                      m_lime
+p_purple	              v_purple	                  m_mediumvioletred
+p_pink	                  v_pink	                     m_hotpink
+p_silver	                 v_silver	                     m_olive
+p_black	                  v_black	                    m_lightpink
+
+************************ 색상커스텀목록 ************************/
+
+/************************ default ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.default .mainBackColor {
+  background: #7377ff !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.default .subBackColor {
+  background: #6266eb !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.default .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.default .subFontColor {
+  color: #7377ff !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.default .mainBorderColor {
+  border-color: #7377ff !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.default .subBorderColor {
+  border-color: #6266eb !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.default .activeBackColor {
+  background: #7377ff !important;
+}
+.tckColorTheme.chat_bot.default .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.default .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #6266eb !important;
+}
+/************************ p_red ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.p_red .mainBackColor {
+  background: #fd9696 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.p_red .subBackColor {
+  background: #dd8383 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.p_red .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.p_red .subFontColor {
+  color: #fd9696 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.p_red .mainBorderColor {
+  border-color: #fd9696 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.p_red .subBorderColor {
+  border-color: #cf7b7b !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.p_red .activeBackColor {
+  background: #fd9696 !important;
+}
+.tckColorTheme.chat_bot.p_red .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.p_red .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #fd9696 !important;
+}
+/************************ p_orange ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.p_orange .mainBackColor {
+  background: #ffb359 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.p_orange .subBackColor {
+  background: #df9d4e !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.p_orange .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.p_orange .subFontColor {
+  color: #ffb359 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.p_orange .mainBorderColor {
+  border-color: #ffb359 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.p_orange .subBorderColor {
+  border-color: #d19349 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.p_orange .activeBackColor {
+  background: #ffb359 !important;
+}
+.tckColorTheme.chat_bot.p_orange .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.p_orange .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #ffb359 !important;
+}
+/************************ p_yellow ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.p_yellow .mainBackColor {
+  background: #e9d026 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.p_yellow .subBackColor {
+  background: #ccb621 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.p_yellow .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.p_yellow .subFontColor {
+  color: #e9d026 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.p_yellow .mainBorderColor {
+  border-color: #e9d026 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.p_yellow .subBorderColor {
+  border-color: #bfaa1f !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.p_yellow .activeBackColor {
+  background: #e9d026 !important;
+}
+.tckColorTheme.chat_bot.p_yellow .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.p_yellow .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #e9d026 !important;
+}
+/************************ p_yellowgreen ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.p_yellowgreen .mainBackColor {
+  background: #abcd44 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.p_yellowgreen .subBackColor {
+  background: #96b33b !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.p_yellowgreen .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.p_yellowgreen .subFontColor {
+  color: #abcd44 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.p_yellowgreen .mainBorderColor {
+  border-color: #abcd44 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.p_yellowgreen .subBorderColor {
+  border-color: #8ca838 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.p_yellowgreen .activeBackColor {
+  background: #abcd44 !important;
+}
+.tckColorTheme.chat_bot.p_yellowgreen .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.p_yellowgreen .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #abcd44 !important;
+}
+/************************ p_green ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.p_green .mainBackColor {
+  background: #4ed788 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.p_green .subBackColor {
+  background: #40b06f !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.p_green .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.p_green .subFontColor {
+  color: #4ed788 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.p_green .mainBorderColor {
+  border-color: #4ed788 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.p_green .subBorderColor {
+  border-color: #44bc77 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.p_green .activeBackColor {
+  background: #4ed788 !important;
+}
+.tckColorTheme.chat_bot.p_green .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.p_green .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #4ed788 !important;
+}
+/************************ p_cyan ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.p_cyan .mainBackColor {
+  background: #47d3be !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.p_cyan .subBackColor {
+  background: #3eb9a6 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.p_cyan .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.p_cyan .subFontColor {
+  color: #47d3be !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.p_cyan .mainBorderColor {
+  border-color: #47d3be !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.p_cyan .subBorderColor {
+  border-color: #3aad9c !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.p_cyan .activeBackColor {
+  background: #47d3be !important;
+}
+.tckColorTheme.chat_bot.p_cyan .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.p_cyan .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #47d3be !important;
+}
+/************************ p_blue ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.p_blue .mainBackColor {
+  background: #7ac2ff !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.p_blue .subBackColor {
+  background: #6baadf !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.p_blue .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.p_blue .subFontColor {
+  color: #7ac2ff !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.p_blue .mainBorderColor {
+  border-color: #7ac2ff !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.p_blue .subBorderColor {
+  border-color: #649fd1 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.p_blue .activeBackColor {
+  background: #7ac2ff !important;
+}
+.tckColorTheme.chat_bot.p_blue .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.p_blue .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #7ac2ff !important;
+}
+/************************ p_navy ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.p_navy .mainBackColor {
+  background: #9aa8fd !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.p_navy .subBackColor {
+  background: #8793dd !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.p_navy .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.p_navy .subFontColor {
+  color: #9aa8fd !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.p_navy .mainBorderColor {
+  border-color: #9aa8fd !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.p_navy .subBorderColor {
+  border-color: #7e8acf !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.p_navy .activeBackColor {
+  background: #9aa8fd !important;
+}
+.tckColorTheme.chat_bot.p_navy .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.p_navy .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #9aa8fd !important;
+}
+/************************ p_purple ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.p_purple .mainBackColor {
+  background: #ca8bff !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.p_purple .subBackColor {
+  background: #b17adf !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.p_purple .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.p_purple .subFontColor {
+  color: #ca8bff !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.p_purple .mainBorderColor {
+  border-color: #ca8bff !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.p_purple .subBorderColor {
+  border-color: #a672d1 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.p_purple .activeBackColor {
+  background: #ca8bff !important;
+}
+.tckColorTheme.chat_bot.p_purple .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.p_purple .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #ca8bff !important;
+}
+/************************ p_pink ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.p_pink .mainBackColor {
+  background: #ff8ec9 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.p_pink .subBackColor {
+  background: #df7cb0 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.p_pink .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.p_pink .subFontColor {
+  color: #ff8ec9 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.p_pink .mainBorderColor {
+  border-color: #ff8ec9 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.p_pink .subBorderColor {
+  border-color: #d174a5 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.p_pink .activeBackColor {
+  background: #ff8ec9 !important;
+}
+.tckColorTheme.chat_bot.p_pink .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.p_pink .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #ff8ec9 !important;
+}
+/************************ p_silver ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.p_silver .mainBackColor {
+  background: #aaaaaa !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.p_silver .subBackColor {
+  background: #959595 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.p_silver .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.p_silver .subFontColor {
+  color: #aaaaaa !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.p_silver .mainBorderColor {
+  border-color: #aaaaaa !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.p_silver .subBorderColor {
+  border-color: #8b8b8b !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.p_silver .activeBackColor {
+  background: #aaaaaa !important;
+}
+.tckColorTheme.chat_bot.p_silver .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.p_silver .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #aaaaaa !important;
+}
+/************************ p_black ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.p_black .mainBackColor {
+  background: #555555 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.p_black .subBackColor {
+  background: #4a4a4a !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.p_black .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.p_black .subFontColor {
+  color: #555555 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.p_black .mainBorderColor {
+  border-color: #555555 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.p_black .subBorderColor {
+  border-color: #464646 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.p_black .activeBackColor {
+  background: #555555 !important;
+}
+.tckColorTheme.chat_bot.p_black .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.p_black .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #555555 !important;
+}
+/************************ v_red ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.v_red .mainBackColor {
+  background: #fc4242 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.v_red .subBackColor {
+  background: #dc3a3a !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.v_red .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.v_red .subFontColor {
+  color: #fc4242 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.v_red .mainBorderColor {
+  border-color: #fc4242 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.v_red .subBorderColor {
+  border-color: #cf3636 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.v_red .activeBackColor {
+  background: #fc4242 !important;
+}
+.tckColorTheme.chat_bot.v_red .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.v_red .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #fc4242 !important;
+}
+/************************ v_orange ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.v_orange .mainBackColor {
+  background: #ff9416 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.v_orange .subBackColor {
+  background: #df8113 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.v_orange .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.v_orange .subFontColor {
+  color: #ff9416 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.v_orange .mainBorderColor {
+  border-color: #ff9416 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.v_orange .subBorderColor {
+  border-color: #d17912 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.v_orange .activeBackColor {
+  background: #ff9416 !important;
+}
+.tckColorTheme.chat_bot.v_orange .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.v_orange .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #ff9416 !important;
+}
+/************************ v_yellow ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.v_yellow .mainBackColor {
+  background: #ffde00 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.v_yellow .subBackColor {
+  background: #dfc200 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.v_yellow .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.v_yellow .subFontColor {
+  color: #ffde00 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.v_yellow .mainBorderColor {
+  border-color: #ffde00 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.v_yellow .subBorderColor {
+  border-color: #d1b600 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.v_yellow .activeBackColor {
+  background: #ffde00 !important;
+}
+.tckColorTheme.chat_bot.v_yellow .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.v_yellow .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #ffde00 !important;
+}
+/************************ v_yellowgreen ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.v_yellowgreen .mainBackColor {
+  background: #8ab700 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.v_yellowgreen .subBackColor {
+  background: #79a000 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.v_yellowgreen .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.v_yellowgreen .subFontColor {
+  color: #8ab700 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.v_yellowgreen .mainBorderColor {
+  border-color: #8ab700 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.v_yellowgreen .subBorderColor {
+  border-color: #719600 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.v_yellowgreen .activeBackColor {
+  background: #8ab700 !important;
+}
+.tckColorTheme.chat_bot.v_yellowgreen .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.v_yellowgreen .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #8ab700 !important;
+}
+/************************ v_green ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.v_green .mainBackColor {
+  background: #0dd60d !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.v_green .subBackColor {
+  background: #0bbb0b !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.v_green .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.v_green .subFontColor {
+  color: #0dd60d !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.v_green .mainBorderColor {
+  border-color: #0dd60d !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.v_green .subBorderColor {
+  border-color: #0baf0b !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.v_green .activeBackColor {
+  background: #0dd60d !important;
+}
+.tckColorTheme.chat_bot.v_green .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.v_green .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #0dd60d !important;
+}
+/************************ v_cyan ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.v_cyan .mainBackColor {
+  background: #00cee0 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.v_cyan .subBackColor {
+  background: #00b4c4 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.v_cyan .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.v_cyan .subFontColor {
+  color: #00cee0 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.v_cyan .mainBorderColor {
+  border-color: #00cee0 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.v_cyan .subBorderColor {
+  border-color: #00a9b8 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.v_cyan .activeBackColor {
+  background: #00cee0 !important;
+}
+.tckColorTheme.chat_bot.v_cyan .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.v_cyan .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #00cee0 !important;
+}
+/************************ v_blue ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.v_blue .mainBackColor {
+  background: #1795ff !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.v_blue .subBackColor {
+  background: #1482df !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.v_blue .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.v_blue .subFontColor {
+  color: #1795ff !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.v_blue .mainBorderColor {
+  border-color: #1795ff !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.v_blue .subBorderColor {
+  border-color: #137ad1 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.v_blue .activeBackColor {
+  background: #1795ff !important;
+}
+.tckColorTheme.chat_bot.v_blue .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.v_blue .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #1795ff !important;
+}
+/************************ v_navy ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.v_navy .mainBackColor {
+  background: #4761ff !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.v_navy .subBackColor {
+  background: #3e55df !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.v_navy .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.v_navy .subFontColor {
+  color: #4761ff !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.v_navy .mainBorderColor {
+  border-color: #4761ff !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.v_navy .subBorderColor {
+  border-color: #3a50d1 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.v_navy .activeBackColor {
+  background: #4761ff !important;
+}
+.tckColorTheme.chat_bot.v_navy .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.v_navy .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #4761ff !important;
+}
+/************************ v_purple ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.v_purple .mainBackColor {
+  background: #aa45ff !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.v_purple .subBackColor {
+  background: #953cdf !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.v_purple .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.v_purple .subFontColor {
+  color: #aa45ff !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.v_purple .mainBorderColor {
+  border-color: #aa45ff !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.v_purple .subBorderColor {
+  border-color: #8b39d1 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.v_purple .activeBackColor {
+  background: #aa45ff !important;
+}
+.tckColorTheme.chat_bot.v_purple .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.v_purple .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #aa45ff !important;
+}
+/************************ v_pink ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.v_pink .mainBackColor {
+  background: #f852a8 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.v_pink .subBackColor {
+  background: #d94893 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.v_pink .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.v_pink .subFontColor {
+  color: #f852a8 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.v_pink .mainBorderColor {
+  border-color: #f852a8 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.v_pink .subBorderColor {
+  border-color: #cb438a !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.v_pink .activeBackColor {
+  background: #f852a8 !important;
+}
+.tckColorTheme.chat_bot.v_pink .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.v_pink .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #f852a8 !important;
+}
+/************************ v_silver ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.v_silver .mainBackColor {
+  background: #999999 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.v_silver .subBackColor {
+  background: #868686 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.v_silver .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.v_silver .subFontColor {
+  color: #999999 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.v_silver .mainBorderColor {
+  border-color: #999999 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.v_silver .subBorderColor {
+  border-color: #7d7d7d !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.v_silver .activeBackColor {
+  background: #999999 !important;
+}
+.tckColorTheme.chat_bot.v_silver .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.v_silver .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #999999 !important;
+}
+/************************ v_black ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.v_black .mainBackColor {
+  background: #222222 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.v_black .subBackColor {
+  background: #444444 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.v_black .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.v_black .subFontColor {
+  color: #222222 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.v_black .mainBorderColor {
+  border-color: #222222 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.v_black .subBorderColor {
+  border-color: #444444 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.v_black .activeBackColor {
+  background: #222222 !important;
+}
+.tckColorTheme.chat_bot.v_black .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.v_black .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #222222 !important;
+}
+/************************ m_burlywood ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.m_burlywood .mainBackColor {
+  background: #dbae78 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.m_burlywood .subBackColor {
+  background: #c09869 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.m_burlywood .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.m_burlywood .subFontColor {
+  color: #dbae78 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.m_burlywood .mainBorderColor {
+  border-color: #dbae78 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.m_burlywood .subBorderColor {
+  border-color: #b38f62 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.m_burlywood .activeBackColor {
+  background: #dbae78 !important;
+}
+.tckColorTheme.chat_bot.m_burlywood .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.m_burlywood .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #dbae78 !important;
+}
+/************************ m_gray ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.m_gray .mainBackColor {
+  background: #9cb1bb !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.m_gray .subBackColor {
+  background: #889ba4 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.m_gray .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.m_gray .subFontColor {
+  color: #9cb1bb !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.m_gray .mainBorderColor {
+  border-color: #9cb1bb !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.m_gray .subBorderColor {
+  border-color: #809199 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.m_gray .activeBackColor {
+  background: #9cb1bb !important;
+}
+.tckColorTheme.chat_bot.m_gray .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.m_gray .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #9cb1bb !important;
+}
+/************************ m_midnightblue ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.m_midnightblue .mainBackColor {
+  background: #154183 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.m_midnightblue .subBackColor {
+  background: #123973 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.m_midnightblue .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.m_midnightblue .subFontColor {
+  color: #154183 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.m_midnightblue .mainBorderColor {
+  border-color: #154183 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.m_midnightblue .subBorderColor {
+  border-color: #11356b !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.m_midnightblue .activeBackColor {
+  background: #154183 !important;
+}
+.tckColorTheme.chat_bot.m_midnightblue .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.m_midnightblue .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #154183 !important;
+}
+/************************ m_darkgreen ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.m_darkgreen .mainBackColor {
+  background: #2a622b !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.m_darkgreen .subBackColor {
+  background: #255626 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.m_darkgreen .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.m_darkgreen .subFontColor {
+  color: #2a622b !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.m_darkgreen .mainBorderColor {
+  border-color: #2a622b !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.m_darkgreen .subBorderColor {
+  border-color: #225023 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.m_darkgreen .activeBackColor {
+  background: #2a622b !important;
+}
+.tckColorTheme.chat_bot.m_darkgreen .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.m_darkgreen .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #2a622b !important;
+}
+/************************ m_aquamarine ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.m_aquamarine .mainBackColor {
+  background: #10dcc6 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.m_aquamarine .subBackColor {
+  background: #0ec0ad !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.m_aquamarine .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.m_aquamarine .subFontColor {
+  color: #10dcc6 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.m_aquamarine .mainBorderColor {
+  border-color: #10dcc6 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.m_aquamarine .subBorderColor {
+  border-color: #0db4a2 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.m_aquamarine .activeBackColor {
+  background: #10dcc6 !important;
+}
+.tckColorTheme.chat_bot.m_aquamarine .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.m_aquamarine .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #10dcc6 !important;
+}
+/************************ m_darkgray ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.m_darkgray .mainBackColor {
+  background: #66698b !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.m_darkgray .subBackColor {
+  background: #595c7a !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.m_darkgray .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.m_darkgray .subFontColor {
+  color: #66698b !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.m_darkgray .mainBorderColor {
+  border-color: #66698b !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.m_darkgray .subBorderColor {
+  border-color: #545672 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.m_darkgray .activeBackColor {
+  background: #66698b !important;
+}
+.tckColorTheme.chat_bot.m_darkgray .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.m_darkgray .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #66698b !important;
+}
+/************************ m_darkred ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.m_darkred .mainBackColor {
+  background: #a31801 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.m_darkred .subBackColor {
+  background: #8f1501 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.m_darkred .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.m_darkred .subFontColor {
+  color: #a31801 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.m_darkred .mainBorderColor {
+  border-color: #a31801 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.m_darkred .subBorderColor {
+  border-color: #861401 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.m_darkred .activeBackColor {
+  background: #a31801 !important;
+}
+.tckColorTheme.chat_bot.m_darkred .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.m_darkred .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #a31801 !important;
+}
+/************************ m_lime ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.m_lime .mainBackColor {
+  background: #5be561 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.m_lime .subBackColor {
+  background: #50c855 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.m_lime .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.m_lime .subFontColor {
+  color: #5be561 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.m_lime .mainBorderColor {
+  border-color: #5be561 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.m_lime .subBorderColor {
+  border-color: #4bbc50 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.m_lime .activeBackColor {
+  background: #5be561 !important;
+}
+.tckColorTheme.chat_bot.m_lime .activeFontColor {
+  color: #5be561;
+}
+.tckColorTheme.chat_bot.m_lime .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #a31801 !important;
+}
+/************************ m_mediumvioletred ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.m_mediumvioletred .mainBackColor {
+  background: #a60075 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.m_mediumvioletred .subBackColor {
+  background: #910066 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.m_mediumvioletred .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.m_mediumvioletred .subFontColor {
+  color: #a60075 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.m_mediumvioletred .mainBorderColor {
+  border-color: #a60075 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.m_mediumvioletred .subBorderColor {
+  border-color: #880060 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.m_mediumvioletred .activeBackColor {
+  background: #a60075 !important;
+}
+.tckColorTheme.chat_bot.m_mediumvioletred .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.m_mediumvioletred .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #a60075 !important;
+}
+/************************ m_hotpink ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.m_hotpink .mainBackColor {
+  background: #ff4f85 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.m_hotpink .subBackColor {
+  background: #df4574 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.m_hotpink .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.m_hotpink .subFontColor {
+  color: #ff4f85 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.m_hotpink .mainBorderColor {
+  border-color: #ff4f85 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.m_hotpink .subBorderColor {
+  border-color: #d1416d !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.m_hotpink .activeBackColor {
+  background: #ff4f85 !important;
+}
+.tckColorTheme.chat_bot.m_hotpink .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.m_hotpink .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #ff4f85 !important;
+}
+/************************ m_olive ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.m_olive .mainBackColor {
+  background: #c2c684 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.m_olive .subBackColor {
+  background: #aaad73 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.m_olive .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.m_olive .subFontColor {
+  color: #c2c684 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.m_olive .mainBorderColor {
+  border-color: #c2c684 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.m_olive .subBorderColor {
+  border-color: #9fa26c !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.m_olive .activeBackColor {
+  background: #c2c684 !important;
+}
+.tckColorTheme.chat_bot.m_olive .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.m_olive .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #c2c684 !important;
+}
+/************************ m_lightpink ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.m_lightpink .mainBackColor {
+  background: #ffb7b7 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.m_lightpink .subBackColor {
+  background: #dfa0a0 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.m_lightpink .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.m_lightpink .subFontColor {
+  color: #ffb7b7 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.m_lightpink .mainBorderColor {
+  border-color: #ffb7b7 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.m_lightpink .subBorderColor {
+  border-color: #d19696 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.m_lightpink .activeBackColor {
+  background: #ffb7b7 !important;
+}
+.tckColorTheme.chat_bot.m_lightpink .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.m_lightpink .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #ffb7b7 !important;
+}
+/************************ royalblue ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.royalblue .mainBackColor {
+  background: #0055bf !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.royalblue .subBackColor {
+  background: #003980 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.royalblue .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.royalblue .subFontColor {
+  color: #0055bf !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.royalblue .mainBorderColor {
+  border-color: #0055bf !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.royalblue .subBorderColor {
+  border-color: #003980 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.royalblue .activeBackColor {
+  background: #0055bf !important;
+}
+.tckColorTheme.chat_bot.royalblue .activeFontColor {
+  color: #fff !important;
+}
+
+.tckColorTheme.chat_bot.royalblue .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #0055bf !important;
+}
+/************************ mediumturquoise ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.mediumturquoise .mainBackColor {
+  background: #00aeb5 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.mediumturquoise .subBackColor {
+  background: #00969c !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.mediumturquoise .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.mediumturquoise .subFontColor {
+  color: #00aeb5 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.mediumturquoise .mainBorderColor {
+  border-color: #00aeb5 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.mediumturquoise .subBorderColor {
+  border-color: #00969c !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.mediumturquoise .activeBackColor {
+  background: #00aeb5 !important;
+}
+.tckColorTheme.chat_bot.mediumturquoise .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.mediumturquoise .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #00aeb5 !important;
+}
+/************************ savethechildren1 ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.savethechildren1 .mainBackColor {
+  background: #da291c !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.savethechildren1 .subBackColor {
+  background: #b52317 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.savethechildren1 .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.savethechildren1 .subFontColor {
+  color: #da291c !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.savethechildren1 .mainBorderColor {
+  border-color: #da291c !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.savethechildren1 .subBorderColor {
+  border-color: #b52317 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.savethechildren1 .activeBackColor {
+  background: #da291c !important;
+}
+.tckColorTheme.chat_bot.savethechildren1 .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.savethechildren1 .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #da291c !important;
+}
+/************************ savethechildren2 ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.savethechildren2 .mainBackColor {
+  background: #a51414 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.savethechildren2 .subBackColor {
+  background: #861a11 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.savethechildren2 .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.savethechildren2 .subFontColor {
+  color: #a51414 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.savethechildren2 .mainBorderColor {
+  border-color: #a51414 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.savethechildren2 .subBorderColor {
+  border-color: #861a11 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.savethechildren2 .activeBackColor {
+  background: #a51414 !important;
+}
+.tckColorTheme.chat_bot.savethechildren2 .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.savethechildren2 .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #a51414 !important;
+}
+/************************ savethechildren3 ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.savethechildren3 .mainBackColor {
+  background: #d1ccbd !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.savethechildren3 .subBackColor {
+  background: #b0a88e !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.savethechildren3 .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.savethechildren3 .subFontColor {
+  color: #d1ccbd !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.savethechildren3 .mainBorderColor {
+  border-color: #d1ccbd !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.savethechildren3 .subBorderColor {
+  border-color: #b0a88e !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.savethechildren3 .activeBackColor {
+  background: #d1ccbd !important;
+}
+.tckColorTheme.chat_bot.savethechildren3 .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.savethechildren3 .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #d1ccbd !important;
+}
+/************************ savethechildren4 ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.savethechildren4 .mainBackColor {
+  background: #9a3324 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.savethechildren4 .subBackColor {
+  background: #822b1e !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.savethechildren4 .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.savethechildren4 .subFontColor {
+  color: #9a3324 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.savethechildren4 .mainBorderColor {
+  border-color: #9a3324 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.savethechildren4 .subBorderColor {
+  border-color: #822b1e !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.savethechildren4 .activeBackColor {
+  background: #9a3324 !important;
+}
+.tckColorTheme.chat_bot.savethechildren4 .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.savethechildren4 .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #9a3324 !important;
+}
+/************************ soomgo ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.soomgo .mainBackColor {
+  background: #693bf2 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.soomgo .subBackColor {
+  background: #5925f5 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.soomgo .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.soomgo .subFontColor {
+  color: #693bf2 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.soomgo .mainBorderColor {
+  border-color: #693bf2 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.soomgo .subBorderColor {
+  border-color: #5925f5 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.soomgo .activeBackColor {
+  background: #693bf2 !important;
+}
+.tckColorTheme.chat_bot.soomgo .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.soomgo .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #693bf2 !important;
+}
+/************************ muji ************************/
+/* 메인 배경컬러 +상담사 아이콘 배경 */
+.tckColorTheme.chat_bot.muji .mainBackColor {
+  background: #7F0019 !important;
+}
+/* 서브 배경컬러  -- 공지사항 컬러*/
+.tckColorTheme.chat_bot.muji .subBackColor {
+  background: #690015 !important;
+}
+/* 메인 폰트컬러 -- 메인배경/ 공지사항과 대비되는 주색 */
+.tckColorTheme.chat_bot.muji .mainFontColor {
+  color: #ffffff !important;
+}
+/* 서브 폰트컬러 1 -- 메인과 동일한 색상 */
+.tckColorTheme.chat_bot.muji .subFontColor {
+  color: #7F0019 !important;
+}
+/* 메인 보더컬러 */
+.tckColorTheme.chat_bot.muji .mainBorderColor {
+  border-color: #7F0019 !important;
+}
+/* 하단 제네릭버튼 보더컬러 */
+.tckColorTheme.chat_bot.muji .subBorderColor {
+  border-color: #690015 !important;
+}
+/* 카테고리 클릭 , 셋팅창 체크 유무 */
+.tckColorTheme.chat_bot.muji .activeBackColor {
+  background: #7F0019 !important;
+}
+.tckColorTheme.chat_bot.muji .activeFontColor {
+  color: #fff !important;
+}
+.tckColorTheme.chat_bot.muji .chat_bot_main .chat_bot_customer_service .chat_bot_category a {
+  border-color: #7F0019 !important;
+}

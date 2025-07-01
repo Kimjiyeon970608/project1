@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", Arial, sans-serif;
+  background: #fff;
+  color: #222;
+}
+.header {
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 72px;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+}
+.logo .jp {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-left: 8px;
+}
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.icon {
+  background: none;
+  border: none;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+.swiper-slide img {
+  width: 100%;
+  display: block;
+}
+
+.main-menu .content-row button {
+  background: white;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 1.6em;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 10px;
+}
+.main-menu .content-row button:hover,
+.main-menu .content-row button:focus {
+  background: #e4dedc;
+  box-shadow: 0 4px 16px rgba(123, 63, 0, 0.16);
+  transform: translateY(-2px) scale(1.03);
+  outline: none;
+}
+.main-menu-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.main-menu-row .content-row {
+  flex-shrink: 0;
+}
+.main-menu-row .main-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 30px;
+}
+.main-photo .main-photo-title {
+  width: 100%;
+  text-align: right;
+  font-size: 1.3rem;
+  margin-bottom: 0.5em;
+}
+.main-menu-row .main-photo img {
+  margin-top: 0;
+  max-width: 60%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(123, 63, 0, 0.16);
+}
