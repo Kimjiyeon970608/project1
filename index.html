@@ -8,8 +8,46 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
+      <style>
+      .popup {
+        position: fixed;
+        width: 420px;
+        height: 170px;
+        background-color: white;
+        border-radius: 20px;
+        padding: 20px;
+        box-sizing: border-box;
+        font-size: 20px;
+        z-index: 99999999;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100px;
+        box-shadow: 8px 8px 16px rgb(0, 0, 0, 0.5);
+        line-height: 1.75;
+      }
+      button {
+        display: block;
+        padding: 8px 10px;
+        border-radius: 8px;
+        position: absolute;
+        right: 20px;
+      }
+    </style>
+
   <body>
-    <div class="header-icons">
+    <div class="popup">
+      해당 사이트는 학습용으로 제작되었으며 무인양품 홈페이지와는 무관합니다.
+      구직용 포트폴리오로 상업적 목적이 없음을 알립니다.
+      <button>닫기</button>
+    </div>
+
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="logo">
+          <a href="index.html">
+            <img src="img/muji_longlogo.svg" alt="무인양품 로고" />
+          </a>
+        </h1>
       <button class="icon search" aria-label="검색">
         <img src="img/search.svg" alt="검색" />
       </button>
@@ -25,14 +63,7 @@
       <button class="icon cart" aria-label="장바구니">
         <img src="img/cart.svg" alt="장바구니" />
       </button>
-    </div>
-    <header class="header">
-      <div class="header-inner">
-        <h1 class="logo">
-          <a href="index.html">
-            <img src="img/muji_longlogo.svg" alt="무인양품 로고" />
-          </a>
-        </h1>
+
       </div>
     </header>
     </nav>
@@ -78,8 +109,10 @@
     pagination: { el: '.swiper-pagination', clickable: true },
     navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
     slidesPerView: 1,
-    spaceBetween: 0,
+    spaceBetween: 0,    
   });
-</script>
+  </script>
+  <script src="script/js.js"></script>
+
   </body>
 </html>
