@@ -1,0 +1,150 @@
+.footer {
+  width: 100%;
+  background: #fff;
+  color: #222;
+  padding: 48px 0 32px 0;
+  font-size: 16px;
+  border-top: 1px solid #eee;
+}
+.footer-nav {
+  max-width: 1200px;
+  margin: 0 auto 32px auto;
+  padding: 0 24px;
+}
+.footer-nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-weight: 600;
+}
+.footer-nav a {
+  color: #222;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-nav a:hover,
+.footer-nav a:focus {
+  color: #b71c1c;
+}
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  padding: 0 24px;
+  flex-wrap: wrap;
+}
+.footer-row {
+  flex: 1 1 200px;
+  min-width: 200px;
+  margin-bottom: 24px;
+}
+.footer-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 18px;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links li {
+  margin-bottom: 10px;
+}
+.footer-links a {
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.footer-links a:hover,
+.footer-links a:focus {
+  color: #b71c1c;
+}
+.footer-row.info address {
+  font-style: normal;
+  color: #888;
+  font-size: 15px;
+  line-height: 1.7;
+}
+.footer-row.cs {
+  color: #888;
+  font-size: 15px;
+  line-height: 1.7;
+}
+.footer-safe {
+  margin: 12px 0;
+  font-size: 13px;
+  color: #aaa;
+}
+.footer-cert {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 12px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  color: #222;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.2s, color 0.2s;
+}
+.footer-cert:hover,
+.footer-cert:focus {
+  background: #f5f5f5;
+  color: #b71c1c;
+}
+.footer-global-btn {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 8px 24px;
+  border: 1px solid #222;
+  border-radius: 6px;
+  background: #fff;
+  color: #222;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background 0.2s, color 0.2s;
+}
+.footer-global-btn:hover,
+.footer-global-btn:focus {
+  background: #222;
+  color: #fff;
+}
+.footer-sns {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+.footer-sns a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  text-align: center;
+  line-height: 36px;
+  transition: background 0.2s;
+}
+.footer-sns a:hover,
+.footer-sns a:focus {
+  background: #b71c1c;
+}
+.footer-sns img {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+}
+@media (max-width: 900px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 0;
+  }
+  .footer-row {
+    min-width: 0;
+  }
+}
