@@ -91,6 +91,40 @@ body {
   width: auto;
 }
 
+.category {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 32px 48px;
+  justify-items: center;
+  align-items: center;
+  margin: 30px 0;
+  background: white;
+  width: 100%;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.category-item img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 4px;
+}
+
+.category-item span {
+  font-size: 1.25rem;
+  color: #222;
+  font-weight: 500;
+  margin-top: 2px;
+  text-decoration: none;
+}
+
 .popup {
   position: fixed;
   width: 420px;
