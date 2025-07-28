@@ -2,7 +2,6 @@
 
 body {
   margin-right: 30px;
-
   font-family: "Noto Sans KR", Arial, sans-serif;
   background: #fff;
   color: #222;
@@ -34,22 +33,17 @@ body {
   box-shadow: none;
 }
 .header-inner {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   display: flex;
   padding: 0 24px;
   height: 72px;
-  justify-content: space-between;
   align-items: center;
 }
 .header-icons {
   display: flex;
   gap: 18px;
   justify-content: flex-end;
-}
-.swiper-slide img {
-  width: 100%;
-  display: block;
 }
 
 .main-menu .content-row button {
@@ -67,7 +61,6 @@ body {
 .main-menu .content-row button:focus {
   background: #e4dedc;
   box-shadow: 0 4px 16px rgba(123, 63, 0, 0.16);
-  transform: translateY(-2px) scale(1.03);
   outline: none;
 }
 .main-menu-row {
@@ -236,4 +229,66 @@ body {
 }
 .main-photo-emit-inner img:hover {
   transform: scale(1.08);
+}
+
+.product-list {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.product-swiper {
+  width: 100%;
+  margin-top: 40px;
+}
+.product-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+.product {
+  width: 200px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+.product img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0;
+  background: #f8f8f8;
+}
+
+.product-title {
+  font-size: 0.8rem;
+  color: #222;
+  margin: 18px 0 10px 0;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  line-height: 1.4;
+  max-width: 100%;
+  white-space: normal;
+}
+
+.product-info-row {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  margin-top: 8px;
+}
+
+.product-price {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #222;
+  margin-right: 8px;
+}
+
+.product-rating {
+  font-size: 0.8rem;
+  color: #888;
+  gap: 2px;
 }
