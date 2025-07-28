@@ -46,6 +46,10 @@ body {
   justify-content: flex-end;
 }
 
+.main-menu img {
+  width: 1200px;
+  height: auto;
+}
 .main-menu .content-row button {
   background: white;
   color: #000000;
