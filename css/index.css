@@ -1,10 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
 
 body {
-  margin-right: 30px;
+  margin: 0;
   font-family: "Noto Sans KR", Arial, sans-serif;
   background: #fff;
   color: #222;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 .header {
   background: #fff;
@@ -33,7 +39,7 @@ body {
   box-shadow: none;
 }
 .header-inner {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   padding: 0 24px;
@@ -44,10 +50,11 @@ body {
   display: flex;
   gap: 18px;
   justify-content: flex-end;
+  margin-left: auto;
 }
 
 .main-menu img {
-  width: 1200px;
+  width: 1280px;
   height: auto;
 }
 .main-menu .content-row button {
@@ -115,9 +122,9 @@ body {
 }
 
 .category-item span {
-  font-size: 1.25rem;
+  font-size: 15px;
   color: #222;
-  font-weight: 500;
+  font-weight: 300;
   margin-top: 2px;
   text-decoration: none;
 }
@@ -175,6 +182,7 @@ body {
 
 .footer-logo img {
   height: 100px;
+  width: 100px;
 }
 
 .footer-links {
@@ -243,8 +251,17 @@ body {
 }
 
 .product-swiper {
+  position: relative;
   width: 100%;
-  margin-top: 40px;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  transition-timing-function: var(
+    --swiper-wrapper-transition-timing-function,
+    initial
+  );
+  box-sizing: content-box;
 }
 .product-swiper .swiper-slide {
   display: flex;
@@ -259,8 +276,8 @@ body {
   margin-bottom: 32px;
 }
 .product img {
-  width: 200px;
-  height: 200px;
+  width: 240px;
+  height: 240px;
   object-fit: cover;
   border-radius: 0;
   background: #f8f8f8;
@@ -295,4 +312,55 @@ body {
   font-size: 0.8rem;
   color: #888;
   gap: 2px;
+}
+.advertising-swiper {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0 0;
+}
+
+.vertical-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.vertical-swiper {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.vertical1 {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.vertical1 img {
+  width: 706px;
+  height: 800px;
+}
+
+.vertical1 p {
+  margin-top: 16px;
+  font-size: 18px;
+  color: #222;
+  text-align: left;
+}
+
+.vertical1 span {
+  font-weight: 700;
+}
+
+.vertical2 img {
+  width: 300px;
+  height: 390px;
+}
+
+.vertical3 img {
+  width: 300px;
+  height: 390px;
 }

@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         0: { slidesPerView: 1 },
         600: { slidesPerView: 2 },
         900: { slidesPerView: 3 },
-        1200: { slidesPerView: 4 },
+        1280: { slidesPerView: 6 },
       },
     });
   }
