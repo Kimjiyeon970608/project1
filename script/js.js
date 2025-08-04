@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// product swiper
 document.addEventListener("DOMContentLoaded", function () {
   if (window.Swiper) {
     new Swiper(".product-swiper", {
