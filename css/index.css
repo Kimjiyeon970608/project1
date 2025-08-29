@@ -1,0 +1,393 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap);
+
+body { margin: 0; font-family: "Noto Sans KR",Arial,sans-serif; background: #fff; color: #222; }
+
+.container { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+.header { background: #fff; position: sticky; top: 0; z-index: 200; border-bottom: 1px solid #f0f0f0; width: 100%; }
+
+.header-inner { max-width: 1280px; width: 100%; margin: 0 auto; display: flex; padding: 0 24px; height: 72px; align-items: center; justify-content: space-between; box-sizing: border-box; }
+
+.header-left { display: flex; align-items: center; gap: 24px; flex-shrink: 0; }
+
+.logo a { display: flex; align-items: center; gap: 8px; text-decoration: none; color: #000; flex-shrink: 0; }
+
+.brand-name { font-size: 24px; font-weight: 700; letter-spacing: 1px; white-space: nowrap; }
+
+.brand-japanese { font-size: 16px; font-weight: 400; white-space: nowrap; }
+
+.header-divider { width: 1px; height: 24px; background: #ddd; flex-shrink: 0; }
+
+.header-menu { display: flex; align-items: center; gap: 0; font-size: 14px; flex-wrap: nowrap; overflow: hidden; }
+
+.menu-link { font-size: 14px; font-weight: 400; color: #333; text-decoration: none; padding: 8px 12px; transition: color 0.2s; white-space: nowrap; flex-shrink: 0; }
+
+.menu-link:focus, .menu-link:hover { color: #000; }
+
+.menu-divider { width: 1px; height: 16px; background: #ddd; margin: 0 4px; flex-shrink: 0; }
+
+.header-icons { display: flex; gap: 16px; align-items: center; flex-shrink: 0; }
+
+.icon { background: none; border: none; width: 24px; height: 24px; cursor: pointer; padding: 0; margin: 0; box-shadow: none; outline: none; position: relative; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+.header-icons img { width: 100%; height: 100%; display: block; background: none; border: none; box-shadow: none; }
+
+.cart-count { position: absolute; top: -4px; right: -4px; background: #333; color: #fff; font-size: 10px; font-weight: 600; width: 16px; height: 16px; border-radius: 50%; display: flex; align-items: center; justify-content: center; line-height: 1; }
+
+.logo img { height: 20px; width: auto; }
+
+/* ====================================  */
+/* === main hero (main-menu-swiper) === */
+/* ====================================  */
+.main-menu { 
+  position: relative;
+  width: 100%;
+  height: clamp(320px, 60vh, 700px);
+  overflow: hidden;
+}
+.main-menu .main-menu-swiper {
+  width: 100%;
+  height: 100%;
+}
+.main-menu .swiper-wrapper {
+  height: 100%;
+  align-items: center;
+}
+.main-menu .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+.main-menu .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* arrows */
+.main-menu .swiper-button-prev,
+.main-menu .swiper-button-next {
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.5);
+}
+.main-menu .swiper-button-prev::after,
+.main-menu .swiper-button-next::after {
+  font-size: 16px;
+  font-weight: 700;
+}
+.main-menu .swiper-button-prev { left: 18%; }
+.main-menu .swiper-button-next { right: 18%; }
+
+/* fraction pagination pill */
+.main-menu .swiper-pagination { bottom: 16px !important; }
+.main-menu .swiper-pagination-fraction { 
+  left: 50% !important; transform: translateX(-50%); width: auto !important;
+  background: rgba(0,0,0,0.55); color: #fff; padding: 6px 12px; border-radius: 16px;
+  font-size: 14px; line-height: 1; display: inline-flex; align-items: center; gap: 6px;
+}
+.main-menu .swiper-pagination-current, .main-menu .swiper-pagination-total { color: #fff; }
+
+@media (max-width: 1024px) {
+  .main-menu .swiper-slide { width: 85% !important; }
+  .main-menu .swiper-button-prev { left: 5%; }
+  .main-menu .swiper-button-next { right: 5%; }
+}
+
+@media (max-width: 768px) {
+  .main-menu .main-menu-swiper { height: clamp(240px, 42vh, 420px); }
+  .main-menu .swiper-button-prev, .main-menu .swiper-button-next { width: 36px; height: 36px; }
+  .main-menu .swiper-button-prev::after, .main-menu .swiper-button-next::after { font-size: 16px; }
+  .main-menu .swiper-pagination-fraction { padding: 5px 10px; font-size: 12px; }
+  .main-menu .swiper-slide { width: 100% !important; }
+}
+
+.category { display: grid; grid-template-columns: repeat(6, 1fr); grid-template-rows: repeat(2, 1fr); gap: 32px 48px; justify-items: center; align-items: center; margin: 30px 0; background: #fff; width: 100%; }
+
+.category-item { display: flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none; }
+
+.category-item img { width: 80px; height: auto; margin-bottom: 4px; }
+
+.category-item span { font-size: 15px; color: #222; font-weight: 300; margin-top: 2px; text-decoration: none; }
+
+.popup { position: fixed; width: 420px; height: 170px; background-color: #fff; border-radius: 20px; padding: 20px; box-sizing: border-box; font-size: 20px; z-index: 99999999; left: 50%; transform: translateX(-50%); top: 100px; box-shadow: 8px 8px 16px rgb(0, 0, 0, 0.5); line-height: 1.75; }
+
+.popup button { display: block; padding: 8px 10px; border-radius: 8px; position: absolute; right: 20px; }
+.site-footer { background: #fff; color: #333; padding: 60px 0 40px 0; border-top: 1px solid #f0f0f0; }
+
+.footer-nav { display: flex; justify-content: flex-start; align-items: center; gap: 40px; margin-bottom: 50px; padding-bottom: 30px; border-bottom: 1px solid #f0f0f0; }
+
+.footer-nav a { color: #666; text-decoration: none; font-size: 14px; font-weight: 600; transition: color 0.2s; }
+
+.footer-main { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 60px; margin-bottom: 50px; padding-bottom: 30px; border-bottom: 1px solid #f0f0f0; }
+
+.footer-left { display: flex; flex-direction: column; gap: 30px; }
+
+.footer-logo { display: flex; flex-direction: column; gap: 4px; }
+
+.logo-text { font-size: 24px; font-weight: 700; color: #333; }
+
+.logo-japanese { font-size: 16px; color: #666; }
+
+.footer-links { display: flex; flex-direction: column; gap: 12px; }
+
+.footer-links a { color: #666; text-decoration: none; font-size: 14px; transition: color 0.2s; }
+
+.footer-links a:hover { color: #333; }
+
+.footer-center { display: flex; flex-direction: column; }
+
+.company-info { display: flex; flex-direction: column; gap: 8px; }
+
+.company-info p { color: #666; font-size: 13px; line-height: 1.5; margin: 0; }
+
+.footer-right { display: flex; flex-direction: column; gap: 0; }
+
+.customer-service { display: flex; flex-direction: column; gap: 8px; }
+
+.customer-service p { color: #666; font-size: 13px; line-height: 1.5; margin: 0; }
+
+.safety-notice { margin-top: 20px; }
+
+.safety-notice p { color: #666; font-size: 12px; line-height: 1.6; margin: 0; }
+
+.employee-cert { margin-top: 15px; }
+
+.employee-cert a { color: #666; text-decoration: underline; font-size: 13px; transition: color 0.2s; }
+
+.employee-cert a:hover { color: #333; }
+
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; }
+
+.social-media { display: flex; gap: 20px; align-items: center; justify-content: center; }
+
+.social-icon { display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; transition: opacity 0.2s; }
+
+.social-icon:hover { opacity: 0.7; }
+
+.social-icon img { width: 100%; height: 100%; object-fit: contain; }
+
+.global-site { display: flex; align-items: center; justify-content: flex-end; width: 100%; }
+
+.global-button { display: flex; align-items: center; gap: 8px; padding: 12px 20px; border: 1px solid #333; background: #fff; color: #333; text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+
+.global-button:hover { background: #333; color: #fff; }
+
+.arrow-right { font-size: 12px; }
+
+.main-photo-emit { overflow: hidden; width: 100%; }
+.main-photo-emit-inner { display: flex; gap: 16px; animation: mainPhotoScroll 20s linear infinite; width: max-content; }
+@keyframes mainPhotoScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.main-photo-emit-inner img { width: 400px; height: auto; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); transition: transform 0.3s; }
+.main-photo-emit-inner img:hover { transform: scale(1.08); }
+
+.product-list { display: flex; gap: 16px; flex-wrap: wrap; justify-content: flex-start; }
+
+.product-swiper { position: relative; max-width:1280px; width: 100%; height: 100%; z-index: 1; display: flex; transition-property: transform; transition-timing-function: var(     --swiper-wrapper-transition-timing-function,     initial   ); box-sizing: content-box; }
+.product-swiper .swiper-slide { display: flex; justify-content: center; }
+.product { width: 200px; background: #fff; display: flex; flex-direction: column; align-items: flex-start; margin-bottom: 32px; }
+.product img { width: 240px; height: 240px; object-fit: cover; border-radius: 0; background: #f8f8f8; }
+
+.product-title { font-size: 0.8rem; color: #222; margin: 18px 0 10px 0; font-weight: 400; letter-spacing: -0.5px; line-height: 1.4; max-width: 100%; white-space: normal; }
+
+.product-info-row { display: flex; align-items: center; gap: 70px; margin-top: 8px; }
+
+.product-price { font-size: 0.8rem; font-weight: 700; color: #222; margin-right: 8px; }
+
+.product-rating { font-size: 0.8rem; color: #888; gap: 2px; }
+.advertising-section { padding: 60px 0; background: #fafafa; }
+
+.advertising-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 1280px; width: 100%; aspect-ratio: 1280/540; margin: 0 auto; }
+
+.advertising-item { background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); transition: transform 0.3s ease; }
+
+.advertising-item:hover { transform: translateY(-4px); }
+
+.advertising-item img[src*="best1.jpg"], .advertising-item img[src*="best6.jpg"] { width: 300px; height: 650px; max-width: 100%; object-fit: cover; display: block; margin: 0 auto; position: relative; border-radius: 8px; }
+.best1-image-container, .best6-image-container { position: absolute; width: 300px; height: 600px; margin: 0 auto; }
+.best1-overlay, .best6-overlay { position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; color: #fff; text-align: left; padding: 20px; }
+
+.best1-overlay p, .best6-overlay p { font-size: 1rem; font-weight: 600; margin-bottom: 10px; }
+.best1-overlay span, .best6-overlay span { font-size: 1.5rem; font-weight: 700; }
+
+.muji365-content { display: flex; flex-direction: column; height: 100%; }
+
+.muji365-image { margin-bottom: 24px; }
+
+.muji365-image img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
+
+.muji365-title { font-size: 24px; font-weight: 700; color: #333; margin: 0 0 16px 0; }
+
+.muji365-description { font-size: 14px; line-height: 1.6; color: #666; margin-bottom: 24px; }
+
+.space-content { display: flex; flex-direction: column; height: 100%; }
+
+.space-image { margin-bottom: 24px; }
+
+.space-image img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
+
+.space-title { font-size: 20px; font-weight: 700; color: #333; margin: 0 0 16px 0; }
+
+.space-description { font-size: 14px; line-height: 1.6; color: #666; margin-bottom: 24px; }
+
+.product-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+
+.product-card { display: flex; gap: 12px; padding: 12px; background: #f8f8f8; border-radius: 8px; }
+
+.product-card img { width: 60px; height: 60px; object-fit: cover; border-radius: 4px; }
+
+.product-info h3 { font-size: 12px; font-weight: 500; color: #333; margin: 0 0 4px 0; line-height: 1.3; }
+
+.price { font-size: 12px; font-weight: 700; color: #333; margin: 0; }
+
+.price.original { color: #999; text-decoration: line-through; font-size: 11px; }
+
+.price.discount { color: #d32f2f; font-size: 12px; }
+
+.new-product { margin-top: 80px; margin-bottom: 80px; }
+
+.apparel-section, .bedding-section, .kitchen-section { background: #fff; border-radius: 12px; padding: 32px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); transition: transform 0.3s ease; }
+
+.apparel-section:hover, .bedding-section:hover, .kitchen-section:hover { transform: translateY(-4px); }
+
+.apparel-content, .bedding-content, .kitchen-content { display: flex; flex-direction: column; height: 100%; }
+
+.apparel-image, .bedding-image, .kitchen-image { margin-bottom: 24px; }
+
+.apparel-image img, .bedding-image img, .kitchen-image img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
+
+.apparel-title, .bedding-title, .kitchen-title { font-size: 20px; font-weight: 700; color: #333; margin: 0 0 16px 0; line-height: 1.3; }
+
+.bedding-description, .kitchen-description { font-size: 14px; line-height: 1.6; color: #666; margin-bottom: 24px; }
+
+.apparel-highlight { font-size: 16px; font-weight: 600; color: #333; margin: 0 0 24px 0; line-height: 1.4; }
+
+.apparel-feedback { margin-top: auto; display: flex; justify-content: flex-end; }
+
+.feedback-button { display: flex; align-items: center; gap: 8px; padding: 8px 12px; background: #f8f8f8; border-radius: 20px; cursor: pointer; transition: background-color 0.2s; }
+
+.feedback-button:hover { background: #f0f0f0; }
+
+.arrow-up { font-size: 14px; color: #666; }
+
+.smiley { font-size: 16px; }
+
+.from-muji-section { padding: 80px 0; background: #fafafa; }
+
+.from-muji-title { text-align: center; font-size: 32px; font-weight: 700; color: #333; margin-bottom: 60px; }
+
+.from-muji-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 1200px; margin: 0 auto 60px auto; width: 100%; }
+
+.from-muji-item { position: relative; width: 100%; aspect-ratio: 1; overflow: hidden; border-radius: 8px; background: #fff; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; cursor: pointer; }
+
+.from-muji-item:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); }
+
+.item-image { width: 100%; height: 100%; position: relative; }
+
+.item-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+
+.from-muji-item:hover .item-image img { transform: scale(1.05); }
+
+.item-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(     to bottom,     rgba(0, 0, 0, 0.1),     rgba(0, 0, 0, 0.7)); display: flex; flex-direction: column; justify-content: flex-end; padding: 10px; color: #fff; opacity: 0; transition: opacity 0.3s ease; }
+
+.from-muji-item:hover .item-overlay { opacity: 1; }
+
+.product-name { font-size: 15px; font-weight: 400; line-height: 1.3; }
+
+.product-info-row { font-size: 13px; }
+
+.eco-text { display: flex; flex-direction: column; gap: 6px; }
+
+.water-text { font-size: 13px; font-weight: 600; }
+
+.bottle-text { font-size: 11px; opacity: 0.9; }
+
+.material-text { display: flex; flex-direction: column; gap: 8px; }
+
+.life-art { font-size: 13px; font-weight: 700; line-height: 1.3; }
+
+.store-info { font-size: 11px; opacity: 0.9; line-height: 1.3; }
+
+.from-muji-button { text-align: center; margin-top: 40px; }
+
+.from-muji-btn { display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px; background: #fff; color: #000; text-decoration: none; font-size: 16px; font-weight: 600; border-radius: 8px; transition: all 0.3s ease; border: 1px solid #333; }
+
+.from-muji-btn:hover { background: #fff; color: #333; }
+
+.from-muji-btn .arrow { font-size: 14px; transition: transform 0.3s ease; }
+
+.from-muji-btn:hover .arrow { transform: translateX(4px); }
+
+.advertising-section2 .advertising-grid { aspect-ratio: 1280/540; }
+
+.footer-logo img[src*="muji_longlogo.svg"] { width: 140px; height: auto; max-width: 100%; display: block; }
+
+.advertising-section1 + .advertising-section2 { padding-top: 80px; }
+
+.test img { width: 120px; }
+
+@media (max-width: 1280px) {
+  .header-inner { padding: 0 20px; }
+  .header-left { gap: 20px; }
+  .menu-link { padding: 8px 10px; font-size: 13px; }
+  .header-icons { gap: 14px; }
+}
+
+@media (max-width: 1024px) {
+  .header-inner { padding: 0 16px; }
+  .header-left { gap: 16px; }
+  .brand-name { font-size: 22px; }
+  .brand-japanese { font-size: 14px; }
+  .menu-link { padding: 6px 8px; font-size: 12px; }
+  .header-icons { gap: 12px; }
+  .icon { width: 22px; height: 22px; }
+  .advertising-grid { grid-template-columns: 1fr; gap: 24px; }
+  .advertising-item { padding: 24px; }
+  .apparel-section,   .bedding-section, .kitchen-section { padding: 24px; }
+  .footer-main { grid-template-columns: 1fr; gap: 40px; }
+  .footer-nav { gap: 30px; }
+  .social-media { gap: 15px; }
+}
+
+@media (max-width: 768px) {
+  .header-inner { padding: 0 12px; height: 64px; }
+  .header-left { gap: 12px; }
+  .brand-name { font-size: 20px; }
+  .brand-japanese { font-size: 12px; }
+  .header-menu { display: none; }
+  .header-icons { gap: 10px; }
+  .icon { width: 20px; height: 20px; }
+  .advertising-section { padding: 40px 0; }
+  .advertising-grid { gap: 16px; }
+  .advertising-item { padding: 20px; }
+  .awards-title,   .muji365-title, .space-title { font-size: 20px; }
+  .apparel-section,   .bedding-section, .kitchen-section { padding: 20px; }
+  .apparel-title,   .bedding-title, .kitchen-title { font-size: 18px; }
+  .apparel-highlight { font-size: 14px; }
+  .site-footer { padding: 40px 0 30px 0; }
+  .footer-nav { flex-wrap: wrap; gap: 20px; justify-content: center; }
+  .footer-nav a { font-size: 13px; }
+  .footer-main { gap: 30px; }
+  .logo-text { font-size: 20px; }
+  .logo-japanese { font-size: 14px; }
+  .footer-bottom { flex-direction: column; gap: 20px; align-items: center; }
+  .global-button { padding: 10px 16px; font-size: 13px; }
+}
+@media (max-width: 1024px) {
+  .from-muji-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 600px; }
+  .from-muji-title { font-size: 28px; margin-bottom: 50px; }
+}
+
+@media (max-width: 768px) {
+  .from-muji-section { padding: 60px 0; }
+  .from-muji-grid { grid-template-columns: 1fr; gap: 20px; max-width: 300px; }
+  .from-muji-title { font-size: 24px; margin-bottom: 40px; }
+  .item-overlay { padding: 16px; }
+  .product-name { font-size: 12px; }
+  .campaign-text { font-size: 13px; }
+  .from-muji-btn { padding: 14px 28px; font-size: 14px; }
+}
